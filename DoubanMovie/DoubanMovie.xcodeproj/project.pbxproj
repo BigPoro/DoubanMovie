@@ -12,6 +12,19 @@
 		53CFB750221E971300EFD786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB74F221E971300EFD786 /* Assets.xcassets */; };
 		53CFB753221E971300EFD786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB751221E971300EFD786 /* LaunchScreen.storyboard */; };
 		53CFB756221E971300EFD786 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB755221E971300EFD786 /* main.m */; };
+		53CFB76B221EE22400EFD786 /* LHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB76A221EE22400EFD786 /* LHTabBarController.m */; };
+		53CFB772221EF2F400EFD786 /* LHNetworkHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */; };
+		53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB774221EFB0A00EFD786 /* LHNavigationController.m */; };
+		53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB779221F024F00EFD786 /* UIImage+JKColor.m */; };
+		53CFB77D221F026D00EFD786 /* UIImage+JKOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB77C221F026D00EFD786 /* UIImage+JKOrientation.m */; };
+		53CFB780221F029F00EFD786 /* UIImage+JKRemoteSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB77E221F029E00EFD786 /* UIImage+JKRemoteSize.m */; };
+		53CFB783221F02B600EFD786 /* UIImage+JKBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB781221F02B600EFD786 /* UIImage+JKBlur.m */; };
+		53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB784221F02F100EFD786 /* UIView+JKToast.m */; };
+		53CFB789221F03A800EFD786 /* UIButton+JKSubmitting.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB788221F03A800EFD786 /* UIButton+JKSubmitting.m */; };
+		53CFB78E221F03E100EFD786 /* NSDate+JKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB78C221F03E100EFD786 /* NSDate+JKUtilities.m */; };
+		53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB78D221F03E100EFD786 /* NSDate+JKExtension.m */; };
+		53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB791221F03F200EFD786 /* NSDate+JKLunarCalendar.m */; };
+		53CFB795221F052B00EFD786 /* LHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB794221F052B00EFD786 /* LHViewController.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +39,34 @@
 		53CFB752221E971300EFD786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53CFB754221E971300EFD786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53CFB755221E971300EFD786 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53CFB768221EE0BB00EFD786 /* DoubanMovie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanMovie.pch; sourceTree = "<group>"; };
+		53CFB769221EE22400EFD786 /* LHTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHTabBarController.h; sourceTree = "<group>"; };
+		53CFB76A221EE22400EFD786 /* LHTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHTabBarController.m; sourceTree = "<group>"; };
+		53CFB76F221EE43700EFD786 /* StaticSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticSettings.h; sourceTree = "<group>"; };
+		53CFB770221EF2F400EFD786 /* LHNetworkHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNetworkHeaders.h; sourceTree = "<group>"; };
+		53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNetworkHeaders.m; sourceTree = "<group>"; };
+		53CFB773221EFB0A00EFD786 /* LHNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNavigationController.h; sourceTree = "<group>"; };
+		53CFB774221EFB0A00EFD786 /* LHNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNavigationController.m; sourceTree = "<group>"; };
+		53CFB778221F024F00EFD786 /* UIImage+JKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKColor.h"; sourceTree = "<group>"; };
+		53CFB779221F024F00EFD786 /* UIImage+JKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKColor.m"; sourceTree = "<group>"; };
+		53CFB77B221F026D00EFD786 /* UIImage+JKOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKOrientation.h"; sourceTree = "<group>"; };
+		53CFB77C221F026D00EFD786 /* UIImage+JKOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKOrientation.m"; sourceTree = "<group>"; };
+		53CFB77E221F029E00EFD786 /* UIImage+JKRemoteSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKRemoteSize.m"; sourceTree = "<group>"; };
+		53CFB77F221F029E00EFD786 /* UIImage+JKRemoteSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKRemoteSize.h"; sourceTree = "<group>"; };
+		53CFB781221F02B600EFD786 /* UIImage+JKBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKBlur.m"; sourceTree = "<group>"; };
+		53CFB782221F02B600EFD786 /* UIImage+JKBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKBlur.h"; sourceTree = "<group>"; };
+		53CFB784221F02F100EFD786 /* UIView+JKToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKToast.m"; sourceTree = "<group>"; };
+		53CFB785221F02F100EFD786 /* UIView+JKToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKToast.h"; sourceTree = "<group>"; };
+		53CFB787221F03A800EFD786 /* UIButton+JKSubmitting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JKSubmitting.h"; sourceTree = "<group>"; };
+		53CFB788221F03A800EFD786 /* UIButton+JKSubmitting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JKSubmitting.m"; sourceTree = "<group>"; };
+		53CFB78A221F03E000EFD786 /* NSDate+JKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKUtilities.h"; sourceTree = "<group>"; };
+		53CFB78B221F03E000EFD786 /* NSDate+JKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKExtension.h"; sourceTree = "<group>"; };
+		53CFB78C221F03E100EFD786 /* NSDate+JKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKUtilities.m"; sourceTree = "<group>"; };
+		53CFB78D221F03E100EFD786 /* NSDate+JKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKExtension.m"; sourceTree = "<group>"; };
+		53CFB790221F03F200EFD786 /* NSDate+JKLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKLunarCalendar.h"; sourceTree = "<group>"; };
+		53CFB791221F03F200EFD786 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
+		53CFB793221F052B00EFD786 /* LHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHViewController.h; sourceTree = "<group>"; };
+		53CFB794221F052B00EFD786 /* LHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHViewController.m; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +114,7 @@
 				53CFB75C221E983F00EFD786 /* Classes */,
 				53CFB746221E971100EFD786 /* AppDelegate.h */,
 				53CFB747221E971100EFD786 /* AppDelegate.m */,
+				53CFB768221EE0BB00EFD786 /* DoubanMovie.pch */,
 				53CFB74C221E971100EFD786 /* Main.storyboard */,
 				53CFB74F221E971300EFD786 /* Assets.xcassets */,
 				53CFB751221E971300EFD786 /* LaunchScreen.storyboard */,
@@ -94,6 +136,8 @@
 		53CFB75F221EC1C100EFD786 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB76D221EE40E00EFD786 /* StaticSettings */,
+				53CFB76C221EE3F100EFD786 /* Category */,
 			);
 			path = Expand;
 			sourceTree = "<group>";
@@ -101,6 +145,7 @@
 		53CFB760221EC1C500EFD786 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB767221EDF9C00EFD786 /* Base */,
 				53CFB766221EC32500EFD786 /* General */,
 				53CFB763221EC2C600EFD786 /* Main */,
 				53CFB762221EC2BE00EFD786 /* Search */,
@@ -133,8 +178,56 @@
 		53CFB766221EC32500EFD786 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB769221EE22400EFD786 /* LHTabBarController.h */,
+				53CFB76A221EE22400EFD786 /* LHTabBarController.m */,
+				53CFB773221EFB0A00EFD786 /* LHNavigationController.h */,
+				53CFB774221EFB0A00EFD786 /* LHNavigationController.m */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		53CFB767221EDF9C00EFD786 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB793221F052B00EFD786 /* LHViewController.h */,
+				53CFB794221F052B00EFD786 /* LHViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		53CFB76C221EE3F100EFD786 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB778221F024F00EFD786 /* UIImage+JKColor.h */,
+				53CFB779221F024F00EFD786 /* UIImage+JKColor.m */,
+				53CFB77B221F026D00EFD786 /* UIImage+JKOrientation.h */,
+				53CFB77C221F026D00EFD786 /* UIImage+JKOrientation.m */,
+				53CFB77F221F029E00EFD786 /* UIImage+JKRemoteSize.h */,
+				53CFB77E221F029E00EFD786 /* UIImage+JKRemoteSize.m */,
+				53CFB782221F02B600EFD786 /* UIImage+JKBlur.h */,
+				53CFB781221F02B600EFD786 /* UIImage+JKBlur.m */,
+				53CFB785221F02F100EFD786 /* UIView+JKToast.h */,
+				53CFB784221F02F100EFD786 /* UIView+JKToast.m */,
+				53CFB787221F03A800EFD786 /* UIButton+JKSubmitting.h */,
+				53CFB788221F03A800EFD786 /* UIButton+JKSubmitting.m */,
+				53CFB78A221F03E000EFD786 /* NSDate+JKUtilities.h */,
+				53CFB78C221F03E100EFD786 /* NSDate+JKUtilities.m */,
+				53CFB78B221F03E000EFD786 /* NSDate+JKExtension.h */,
+				53CFB78D221F03E100EFD786 /* NSDate+JKExtension.m */,
+				53CFB790221F03F200EFD786 /* NSDate+JKLunarCalendar.h */,
+				53CFB791221F03F200EFD786 /* NSDate+JKLunarCalendar.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		53CFB76D221EE40E00EFD786 /* StaticSettings */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB76F221EE43700EFD786 /* StaticSettings.h */,
+				53CFB770221EF2F400EFD786 /* LHNetworkHeaders.h */,
+				53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */,
+			);
+			path = StaticSettings;
 			sourceTree = "<group>";
 		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
@@ -262,8 +355,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53CFB76B221EE22400EFD786 /* LHTabBarController.m in Sources */,
+				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
+				53CFB795221F052B00EFD786 /* LHViewController.m in Sources */,
+				53CFB78E221F03E100EFD786 /* NSDate+JKUtilities.m in Sources */,
+				53CFB780221F029F00EFD786 /* UIImage+JKRemoteSize.m in Sources */,
+				53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */,
+				53CFB77D221F026D00EFD786 /* UIImage+JKOrientation.m in Sources */,
+				53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */,
 				53CFB756221E971300EFD786 /* main.m in Sources */,
+				53CFB783221F02B600EFD786 /* UIImage+JKBlur.m in Sources */,
+				53CFB789221F03A800EFD786 /* UIButton+JKSubmitting.m in Sources */,
 				53CFB748221E971100EFD786 /* AppDelegate.m in Sources */,
+				53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */,
+				53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */,
+				53CFB772221EF2F400EFD786 /* LHNetworkHeaders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +514,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLHK86ZFY6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMovie/DoubanMovie.pch";
 				INFOPLIST_FILE = DoubanMovie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,6 +535,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLHK86ZFY6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMovie/DoubanMovie.pch";
 				INFOPLIST_FILE = DoubanMovie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

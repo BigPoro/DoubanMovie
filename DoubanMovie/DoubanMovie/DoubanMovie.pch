@@ -1,0 +1,15 @@
+//
+//  DoubanMovie.pch
+//  DoubanMovie
+//
+//  Created by iDog on 2019/2/21.
+//  Copyright © 2019 iDog. All rights reserved.
+//
+
+#ifndef DoubanMovie_pch
+#define DoubanMovie_pch
+
+#import "StaticSettings.h"
+
+#import "UIImage+JKColor.h"
+#endif /* DoubanMovie_pch */

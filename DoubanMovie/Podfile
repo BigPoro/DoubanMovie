@@ -8,10 +8,12 @@ pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag 
 pod 'BlocksKit'
 pod 'IQKeyboardManager', '~>5.0'
 pod 'Masonry'
-pod 'YYModel'
 pod 'SDWebImage'
 pod 'SMPageControl'
 pod 'MJExtension'
 pod 'SVProgressHUD'
 pod 'CYLTabBarController'
+
+
+
 end
