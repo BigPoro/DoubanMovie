@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53CFB748221E971100EFD786 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB747221E971100EFD786 /* AppDelegate.m */; };
+		53CFB74E221E971100EFD786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB74C221E971100EFD786 /* Main.storyboard */; };
+		53CFB750221E971300EFD786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB74F221E971300EFD786 /* Assets.xcassets */; };
+		53CFB753221E971300EFD786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB751221E971300EFD786 /* LaunchScreen.storyboard */; };
+		53CFB756221E971300EFD786 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB755221E971300EFD786 /* main.m */; };
+		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoubanMovie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		330BB965ABD1567CDC761C8A /* Pods-DoubanMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.debug.xcconfig"; sourceTree = "<group>"; };
+		53CFB743221E971100EFD786 /* DoubanMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubanMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53CFB746221E971100EFD786 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		53CFB747221E971100EFD786 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		53CFB74D221E971100EFD786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53CFB74F221E971300EFD786 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53CFB752221E971300EFD786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53CFB754221E971300EFD786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53CFB755221E971300EFD786 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53CFB740221E971100EFD786 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CAB3B63717C93E8D18C2E7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53CFB73A221E971100EFD786 = {
+			isa = PBXGroup;
+			children = (
+				53CFB745221E971100EFD786 /* DoubanMovie */,
+				53CFB744221E971100EFD786 /* Products */,
+				AF62BC7F841FFB5BF517EE89 /* Pods */,
+				4CAB3B63717C93E8D18C2E7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		53CFB744221E971100EFD786 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB743221E971100EFD786 /* DoubanMovie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53CFB745221E971100EFD786 /* DoubanMovie */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB75C221E983F00EFD786 /* Classes */,
+				53CFB746221E971100EFD786 /* AppDelegate.h */,
+				53CFB747221E971100EFD786 /* AppDelegate.m */,
+				53CFB74C221E971100EFD786 /* Main.storyboard */,
+				53CFB74F221E971300EFD786 /* Assets.xcassets */,
+				53CFB751221E971300EFD786 /* LaunchScreen.storyboard */,
+				53CFB754221E971300EFD786 /* Info.plist */,
+				53CFB755221E971300EFD786 /* main.m */,
+			);
+			path = DoubanMovie;
+			sourceTree = "<group>";
+		};
+		53CFB75C221E983F00EFD786 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB760221EC1C500EFD786 /* Modules */,
+				53CFB75F221EC1C100EFD786 /* Expand */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		53CFB75F221EC1C100EFD786 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		53CFB760221EC1C500EFD786 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB766221EC32500EFD786 /* General */,
+				53CFB763221EC2C600EFD786 /* Main */,
+				53CFB762221EC2BE00EFD786 /* Search */,
+				53CFB761221EC2AC00EFD786 /* InTheaters */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		53CFB761221EC2AC00EFD786 /* InTheaters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InTheaters;
+			sourceTree = "<group>";
+		};
+		53CFB762221EC2BE00EFD786 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		53CFB763221EC2C600EFD786 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		53CFB766221EC32500EFD786 /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				330BB965ABD1567CDC761C8A /* Pods-DoubanMovie.debug.xcconfig */,
+				8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53CFB742221E971100EFD786 /* DoubanMovie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53CFB759221E971300EFD786 /* Build configuration list for PBXNativeTarget "DoubanMovie" */;
+			buildPhases = (
+				FB72AD33D31DE2B1D45563A2 /* [CP] Check Pods Manifest.lock */,
+				53CFB73F221E971100EFD786 /* Sources */,
+				53CFB740221E971100EFD786 /* Frameworks */,
+				53CFB741221E971100EFD786 /* Resources */,
+				2EBD2FE265FE45458B0BE527 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoubanMovie;
+			productName = DoubanMovie;
+			productReference = 53CFB743221E971100EFD786 /* DoubanMovie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53CFB73B221E971100EFD786 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LH;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = iDog;
+				TargetAttributes = {
+					53CFB742221E971100EFD786 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 53CFB73E221E971100EFD786 /* Build configuration list for PBXProject "DoubanMovie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53CFB73A221E971100EFD786;
+			productRefGroup = 53CFB744221E971100EFD786 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53CFB742221E971100EFD786 /* DoubanMovie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53CFB741221E971100EFD786 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53CFB753221E971300EFD786 /* LaunchScreen.storyboard in Resources */,
+				53CFB750221E971300EFD786 /* Assets.xcassets in Resources */,
+				53CFB74E221E971100EFD786 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EBD2FE265FE45458B0BE527 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB72AD33D31DE2B1D45563A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoubanMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53CFB73F221E971100EFD786 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53CFB756221E971300EFD786 /* main.m in Sources */,
+				53CFB748221E971100EFD786 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53CFB74C221E971100EFD786 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53CFB74D221E971100EFD786 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53CFB751221E971300EFD786 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53CFB752221E971300EFD786 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53CFB757221E971300EFD786 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		53CFB758221E971300EFD786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53CFB75A221E971300EFD786 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330BB965ABD1567CDC761C8A /* Pods-DoubanMovie.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLHK86ZFY6;
+				INFOPLIST_FILE = DoubanMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iDog.DoubanMovie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		53CFB75B221E971300EFD786 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLHK86ZFY6;
+				INFOPLIST_FILE = DoubanMovie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iDog.DoubanMovie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53CFB73E221E971100EFD786 /* Build configuration list for PBXProject "DoubanMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53CFB757221E971300EFD786 /* Debug */,
+				53CFB758221E971300EFD786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53CFB759221E971300EFD786 /* Build configuration list for PBXNativeTarget "DoubanMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53CFB75A221E971300EFD786 /* Debug */,
+				53CFB75B221E971300EFD786 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53CFB73B221E971100EFD786 /* Project object */;
+}

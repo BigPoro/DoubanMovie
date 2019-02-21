@@ -1,0 +1,17 @@
+
+platform:ios, '9.0'
+target 'DoubanMovie' do
+inhibit_all_warnings!
+pod 'MJRefresh'
+pod 'AFNetworking'
+pod 'ReactiveCocoa', :git => 'https://github.com/zhao0/ReactiveCocoa.git', :tag => '2.5.2'
+pod 'BlocksKit'
+pod 'IQKeyboardManager', '~>5.0'
+pod 'Masonry'
+pod 'YYModel'
+pod 'SDWebImage'
+pod 'SMPageControl'
+pod 'MJExtension'
+pod 'SVProgressHUD'
+pod 'CYLTabBarController'
+end
