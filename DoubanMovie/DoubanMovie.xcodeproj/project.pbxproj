@@ -12,7 +12,6 @@
 		53CFB750221E971300EFD786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB74F221E971300EFD786 /* Assets.xcassets */; };
 		53CFB753221E971300EFD786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB751221E971300EFD786 /* LaunchScreen.storyboard */; };
 		53CFB756221E971300EFD786 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB755221E971300EFD786 /* main.m */; };
-		53CFB76B221EE22400EFD786 /* LHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB76A221EE22400EFD786 /* LHTabBarController.m */; };
 		53CFB772221EF2F400EFD786 /* LHNetworkHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */; };
 		53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB774221EFB0A00EFD786 /* LHNavigationController.m */; };
 		53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB779221F024F00EFD786 /* UIImage+JKColor.m */; };
@@ -25,6 +24,12 @@
 		53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB78D221F03E100EFD786 /* NSDate+JKExtension.m */; };
 		53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB791221F03F200EFD786 /* NSDate+JKLunarCalendar.m */; };
 		53CFB795221F052B00EFD786 /* LHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB794221F052B00EFD786 /* LHViewController.m */; };
+		53CFB798221F8A1F00EFD786 /* LHInTheatersViewControlloer.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB797221F8A1F00EFD786 /* LHInTheatersViewControlloer.m */; };
+		53CFB79B221F8A5800EFD786 /* LHMainSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB79A221F8A5800EFD786 /* LHMainSearchViewController.m */; };
+		53CFB79E221F8AA100EFD786 /* LHMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB79D221F8AA100EFD786 /* LHMineViewController.m */; };
+		53CFB7A1221F90A700EFD786 /* LHTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7A0221F90A700EFD786 /* LHTabBarControllerConfig.m */; };
+		53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7A4221FCCB300EFD786 /* LHReaderViewController.m */; };
+		53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7A8221FE31C00EFD786 /* LHMusicViewController.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -40,8 +45,6 @@
 		53CFB754221E971300EFD786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53CFB755221E971300EFD786 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53CFB768221EE0BB00EFD786 /* DoubanMovie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanMovie.pch; sourceTree = "<group>"; };
-		53CFB769221EE22400EFD786 /* LHTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHTabBarController.h; sourceTree = "<group>"; };
-		53CFB76A221EE22400EFD786 /* LHTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHTabBarController.m; sourceTree = "<group>"; };
 		53CFB76F221EE43700EFD786 /* StaticSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticSettings.h; sourceTree = "<group>"; };
 		53CFB770221EF2F400EFD786 /* LHNetworkHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNetworkHeaders.h; sourceTree = "<group>"; };
 		53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNetworkHeaders.m; sourceTree = "<group>"; };
@@ -67,6 +70,18 @@
 		53CFB791221F03F200EFD786 /* NSDate+JKLunarCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKLunarCalendar.m"; sourceTree = "<group>"; };
 		53CFB793221F052B00EFD786 /* LHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHViewController.h; sourceTree = "<group>"; };
 		53CFB794221F052B00EFD786 /* LHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHViewController.m; sourceTree = "<group>"; };
+		53CFB796221F8A1F00EFD786 /* LHInTheatersViewControlloer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHInTheatersViewControlloer.h; sourceTree = "<group>"; };
+		53CFB797221F8A1F00EFD786 /* LHInTheatersViewControlloer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHInTheatersViewControlloer.m; sourceTree = "<group>"; };
+		53CFB799221F8A5800EFD786 /* LHMainSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMainSearchViewController.h; sourceTree = "<group>"; };
+		53CFB79A221F8A5800EFD786 /* LHMainSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMainSearchViewController.m; sourceTree = "<group>"; };
+		53CFB79C221F8AA100EFD786 /* LHMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMineViewController.h; sourceTree = "<group>"; };
+		53CFB79D221F8AA100EFD786 /* LHMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMineViewController.m; sourceTree = "<group>"; };
+		53CFB79F221F90A700EFD786 /* LHTabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHTabBarControllerConfig.h; sourceTree = "<group>"; };
+		53CFB7A0221F90A700EFD786 /* LHTabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHTabBarControllerConfig.m; sourceTree = "<group>"; };
+		53CFB7A3221FCCB300EFD786 /* LHReaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHReaderViewController.h; sourceTree = "<group>"; };
+		53CFB7A4221FCCB300EFD786 /* LHReaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHReaderViewController.m; sourceTree = "<group>"; };
+		53CFB7A7221FE31C00EFD786 /* LHMusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMusicViewController.h; sourceTree = "<group>"; };
+		53CFB7A8221FE31C00EFD786 /* LHMusicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMusicViewController.m; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,9 +160,11 @@
 		53CFB760221EC1C500EFD786 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB7A6221FE30E00EFD786 /* Music */,
+				53CFB7A2221FCC9F00EFD786 /* Reader */,
 				53CFB767221EDF9C00EFD786 /* Base */,
 				53CFB766221EC32500EFD786 /* General */,
-				53CFB763221EC2C600EFD786 /* Main */,
+				53CFB763221EC2C600EFD786 /* Mine */,
 				53CFB762221EC2BE00EFD786 /* Search */,
 				53CFB761221EC2AC00EFD786 /* InTheaters */,
 			);
@@ -157,6 +174,8 @@
 		53CFB761221EC2AC00EFD786 /* InTheaters */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB796221F8A1F00EFD786 /* LHInTheatersViewControlloer.h */,
+				53CFB797221F8A1F00EFD786 /* LHInTheatersViewControlloer.m */,
 			);
 			path = InTheaters;
 			sourceTree = "<group>";
@@ -164,24 +183,28 @@
 		53CFB762221EC2BE00EFD786 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB799221F8A5800EFD786 /* LHMainSearchViewController.h */,
+				53CFB79A221F8A5800EFD786 /* LHMainSearchViewController.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
 		};
-		53CFB763221EC2C600EFD786 /* Main */ = {
+		53CFB763221EC2C600EFD786 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB79C221F8AA100EFD786 /* LHMineViewController.h */,
+				53CFB79D221F8AA100EFD786 /* LHMineViewController.m */,
 			);
-			path = Main;
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		53CFB766221EC32500EFD786 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				53CFB769221EE22400EFD786 /* LHTabBarController.h */,
-				53CFB76A221EE22400EFD786 /* LHTabBarController.m */,
 				53CFB773221EFB0A00EFD786 /* LHNavigationController.h */,
 				53CFB774221EFB0A00EFD786 /* LHNavigationController.m */,
+				53CFB79F221F90A700EFD786 /* LHTabBarControllerConfig.h */,
+				53CFB7A0221F90A700EFD786 /* LHTabBarControllerConfig.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -228,6 +251,24 @@
 				53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */,
 			);
 			path = StaticSettings;
+			sourceTree = "<group>";
+		};
+		53CFB7A2221FCC9F00EFD786 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB7A3221FCCB300EFD786 /* LHReaderViewController.h */,
+				53CFB7A4221FCCB300EFD786 /* LHReaderViewController.m */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		53CFB7A6221FE30E00EFD786 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB7A7221FE31C00EFD786 /* LHMusicViewController.h */,
+				53CFB7A8221FE31C00EFD786 /* LHMusicViewController.m */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
@@ -355,20 +396,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53CFB76B221EE22400EFD786 /* LHTabBarController.m in Sources */,
+				53CFB798221F8A1F00EFD786 /* LHInTheatersViewControlloer.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
+				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,
 				53CFB795221F052B00EFD786 /* LHViewController.m in Sources */,
 				53CFB78E221F03E100EFD786 /* NSDate+JKUtilities.m in Sources */,
 				53CFB780221F029F00EFD786 /* UIImage+JKRemoteSize.m in Sources */,
+				53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */,
+				53CFB7A1221F90A700EFD786 /* LHTabBarControllerConfig.m in Sources */,
 				53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */,
 				53CFB77D221F026D00EFD786 /* UIImage+JKOrientation.m in Sources */,
 				53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */,
 				53CFB756221E971300EFD786 /* main.m in Sources */,
 				53CFB783221F02B600EFD786 /* UIImage+JKBlur.m in Sources */,
+				53CFB79E221F8AA100EFD786 /* LHMineViewController.m in Sources */,
 				53CFB789221F03A800EFD786 /* UIButton+JKSubmitting.m in Sources */,
 				53CFB748221E971100EFD786 /* AppDelegate.m in Sources */,
 				53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */,
 				53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */,
+				53CFB79B221F8A5800EFD786 /* LHMainSearchViewController.m in Sources */,
 				53CFB772221EF2F400EFD786 /* LHNetworkHeaders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

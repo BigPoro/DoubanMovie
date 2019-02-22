@@ -1,22 +1,22 @@
 //
-//  LHTabBarController.m
+//  LHMusicViewController.m
 //  DoubanMovie
 //
-//  Created by iDog on 2019/2/21.
+//  Created by iDog on 2019/2/22.
 //  Copyright © 2019 iDog. All rights reserved.
 //
 
-#import "LHTabBarController.h"
+#import "LHMusicViewController.h"
 
-@interface LHTabBarController ()
+@interface LHMusicViewController ()
 
 @end
 
-@implementation LHTabBarController
+@implementation LHMusicViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    // Do any additional setup after loading the view.
 }
 
 /*

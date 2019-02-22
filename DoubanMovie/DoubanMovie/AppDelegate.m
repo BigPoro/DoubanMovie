@@ -8,6 +8,7 @@
 
 
 #import "AppDelegate.h"
+#import "LHTabBarControllerConfig.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +18,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setupRootViewController];
     return YES;
+}
+
+- (void)setupRootViewController
+{
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [LHTabBarControllerConfig new].mainTabBarController;
+    [self.window makeKeyAndVisible];
 }
 
 

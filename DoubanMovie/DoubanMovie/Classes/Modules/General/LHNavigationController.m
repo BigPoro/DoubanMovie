@@ -7,7 +7,6 @@
 //
 
 #import "LHNavigationController.h"
-
 @interface LHNavigationController ()
 
 @end

@@ -44,6 +44,8 @@
 #define kTabbarHeight (iPhoneX ? (49.f + 34.f) : 49.f)
 
 
+#define kWeakSelf __weak __typeof__(self) weakSelf = self;
+
 /**
  关于颜色的方法和项目中的固定配色
  
@@ -54,8 +56,8 @@
  @return color
  */
 
-#define RGBCOLOR(r, g, b)       [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/1]
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 
 #define kGray_one      RGBCOLOR(147,147,147)
 #define kGgray_tow     RGBCOLOR(49,49,49)
