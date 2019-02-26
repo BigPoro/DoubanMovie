@@ -13,13 +13,13 @@
 #import "LHInTheatersViewControlloer.h"
 #import "LHReaderViewController.h"
 #import "LHMusicViewController.h"
+#import "LHReaderPlusBtn.h"
 static CGFloat const kTabBarControllerHeight = 40.f;
-static NSInteger const kSelectedCoverIndex = 2;
+static NSInteger const kSelectedCoverIndex = 0;
 
 @interface LHTabBarControllerConfig()<CYLTabBarControllerDelegate,UITabBarControllerDelegate>
 
 @property (nonatomic, weak) UIButton *selectedCover;
-
 
 @end
 
@@ -33,7 +33,9 @@ static NSInteger const kSelectedCoverIndex = 2;
     if (!self) {
         return nil;
     }
+    [LHReaderPlusBtn registerPlusButton]; // 注册按钮
     [self mainTabBarController];
+    
     return self;
 }
 #pragma mark UI
@@ -45,6 +47,12 @@ static NSInteger const kSelectedCoverIndex = 2;
         _mainTabBarController = [CYLTabBarController tabBarControllerWithViewControllers:[self arrayViewControllerItem] tabBarItemsAttributes:[self arrayAttributesItem] imageInsets:imageInsets titlePositionAdjustment:titlePositionAdjustment];
         _mainTabBarController.delegate = self;
         [self customizeTabBarAppearance:_mainTabBarController];
+        
+        /**
+         如果是第一个tabbarItem需要特殊遮盖
+         调用 setupSelectedCoverBtn
+         */
+//        [self setupSelectedCoverBtn];
     }
     return _mainTabBarController;
 }
@@ -69,7 +77,6 @@ static NSInteger const kSelectedCoverIndex = 2;
             }
         }
     }];
-
 }
 - (void)setSelectedCoverShow:(BOOL)show {
     if (_selectedCover.superview && show) {
@@ -79,7 +86,7 @@ static NSInteger const kSelectedCoverIndex = 2;
     UIControl *selectedTabButton = [[self cyl_tabBarController].viewControllers[kSelectedCoverIndex].tabBarItem cyl_tabButton];
     if (show && !_selectedCover.superview) {
         UIButton *selectedCover = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage *image = [UIImage imageNamed:@"douban_reader_logo"];
+        UIImage *image = [UIImage imageNamed:@"douban_movie_logo"];
         [selectedCover setImage:image forState:UIControlStateNormal];
         selectedCover.frame = CGRectMake(0, 0, image.size.width, image.size.height);
         if (selectedTabButton) {
@@ -114,8 +121,8 @@ static NSInteger const kSelectedCoverIndex = 2;
     LHNavigationController *secondNavigationController = [[LHNavigationController alloc]
                                                           initWithRootViewController:[[LHMainSearchViewController alloc] init]];
     
-    LHNavigationController *thirdNavigationController = [[LHNavigationController alloc]
-                                                          initWithRootViewController:[[LHReaderViewController alloc] init]];
+//    LHNavigationController *thirdNavigationController = [[LHNavigationController alloc]
+//                                                          initWithRootViewController:[[LHReaderViewController alloc] init]];
     
     LHNavigationController *fourthNavigationController = [[LHNavigationController alloc]
                                                          initWithRootViewController:[[LHMusicViewController alloc] init]];
@@ -125,7 +132,7 @@ static NSInteger const kSelectedCoverIndex = 2;
     NSArray *viewControllers = @[
                                  firstNavigationController,
                                  secondNavigationController,
-                                 thirdNavigationController,
+//                                 thirdNavigationController,
                                  fourthNavigationController,
                                  fifthNavigationController
                                  ];
@@ -144,9 +151,9 @@ static NSInteger const kSelectedCoverIndex = 2;
                                               CYLTabBarItemImage : @"ic_tab_discover_gray_27x27_",
                                               CYLTabBarItemSelectedImage : @"ic_tab_discover_black_27x27_",};
    
-    NSDictionary *thirdItemsAttributes = @{CYLTabBarItemTitle : @"读书",
-                                           CYLTabBarItemImage : @"douban_reader",
-                                           CYLTabBarItemSelectedImage : @"douban_reader_seleted",};
+//    NSDictionary *thirdItemsAttributes = @{CYLTabBarItemTitle : @"读书",
+//                                           CYLTabBarItemImage : @"douban_reader",
+//                                           CYLTabBarItemSelectedImage : @"douban_reader_seleted",};
     
     NSDictionary *fourthItemsAttributes = @{CYLTabBarItemTitle : @"音乐",
                                            CYLTabBarItemImage : @"douban_fm",
@@ -159,7 +166,7 @@ static NSInteger const kSelectedCoverIndex = 2;
                                            CYLTabBarItemSelectedImage : @"ic_tab_profile_black_27x27_",};
     NSArray *tabBarItemsAttributes = @[firstItemsAttributes,
                                        secondItemsAttributes,
-                                       thirdItemsAttributes,
+//                                       thirdItemsAttributes,
                                        fourthItemsAttributes,
                                        fifthItemsAttributes
                                        ];
@@ -242,37 +249,36 @@ static NSInteger const kSelectedCoverIndex = 2;
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectControl:(UIControl *)control
 {
-    UIView *animationView;
+//    UIView *animationView;
+//    
+//    if ([control cyl_isTabButton]) {
+//        // 更改红标状态
+//        if ([[self cyl_tabBarController].selectedViewController cyl_isShowTabBadgePoint]) {
+//            [[self cyl_tabBarController].selectedViewController cyl_removeTabBadgePoint];
+//        } else {
+//            [[self cyl_tabBarController].selectedViewController cyl_showTabBadgePoint];
+//        }
+//        animationView = [control cyl_tabImageView];
+//    }
+//    
+//    UIButton *button = CYLExternPlusButton;
+//    BOOL isPlusButton = [control cyl_isPlusButton];
+//    // 即使 PlusButton 也添加了点击事件，点击 PlusButton 后也会触发该代理方法。
+//    if (isPlusButton) {
+//        animationView = button.imageView;
+//    }
+//    
+//    if ([self cyl_tabBarController].selectedIndex %2 == 00) {
+//        [self addScaleAnimationOnView:animationView repeatCount:1];
+//    } else {
+//        [self addRotateAnimationOnView:animationView];
+//    }
     
-    if ([control cyl_isTabButton]) {
-        // 更改红标状态
-        if ([[self cyl_tabBarController].selectedViewController cyl_isShowTabBadgePoint]) {
-            [[self cyl_tabBarController].selectedViewController cyl_removeTabBadgePoint];
-        } else {
-            [[self cyl_tabBarController].selectedViewController cyl_showTabBadgePoint];
-        }
-        animationView = [control cyl_tabImageView];
-    }
-    
-    UIButton *button = CYLExternPlusButton;
-    BOOL isPlusButton = [control cyl_isPlusButton];
-    // 即使 PlusButton 也添加了点击事件，点击 PlusButton 后也会触发该代理方法。
-    if (isPlusButton) {
-        animationView = button.imageView;
-    }
-    
-    if ([self cyl_tabBarController].selectedIndex == 0) {
-        [self addScaleAnimationOnView:animationView repeatCount:1];
-    } else {
-        [self addRotateAnimationOnView:animationView];
-    }
-    
-    //添加仿淘宝tabbar，第四个tab选中后有图标覆盖
-    if ([control cyl_isTabButton]|| [control cyl_isPlusButton]) {
-        BOOL shouldSelectedCoverShow = ([self cyl_tabBarController].selectedIndex == kSelectedCoverIndex);
-        [self setSelectedCoverShow:shouldSelectedCoverShow];
-    }
-    
+    //添加仿淘宝tabbar，第1个tab选中后有图标覆盖
+//    if ([control cyl_isTabButton]|| [control cyl_isPlusButton]) {
+//        BOOL shouldSelectedCoverShow = ([self cyl_tabBarController].selectedIndex == kSelectedCoverIndex);
+//        [self setSelectedCoverShow:shouldSelectedCoverShow];
+//    }
 }
 
 //缩放动画
