@@ -5,6 +5,12 @@
 {
     return @{@"identifier":@"id"};
 }
++ (NSDictionary *)mj_objectClassInArray
+{
+    return @{@"genres": @"LHCast",
+             @"directors": @"LHCast"
+             };
+}
 @end
 
 @implementation LHCast

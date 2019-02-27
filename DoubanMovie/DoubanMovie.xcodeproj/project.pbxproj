@@ -12,7 +12,6 @@
 		53CFB750221E971300EFD786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB74F221E971300EFD786 /* Assets.xcassets */; };
 		53CFB753221E971300EFD786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53CFB751221E971300EFD786 /* LaunchScreen.storyboard */; };
 		53CFB756221E971300EFD786 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB755221E971300EFD786 /* main.m */; };
-		53CFB772221EF2F400EFD786 /* LHNetworkHeaders.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */; };
 		53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB774221EFB0A00EFD786 /* LHNavigationController.m */; };
 		53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB779221F024F00EFD786 /* UIImage+JKColor.m */; };
 		53CFB77D221F026D00EFD786 /* UIImage+JKOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB77C221F026D00EFD786 /* UIImage+JKOrientation.m */; };
@@ -42,6 +41,9 @@
 		53CFB7DB2226720C00EFD786 /* LHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7DA2226720C00EFD786 /* LHModel.m */; };
 		53CFB7DE2226759A00EFD786 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7DD2226759A00EFD786 /* NSArray+Log.m */; };
 		53CFB7E12226765C00EFD786 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7E02226765C00EFD786 /* NSDictionary+Log.m */; };
+		53CFB7EA222699C500EFD786 /* LHMoiveList.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7E8222699C500EFD786 /* LHMoiveList.m */; };
+		53CFB7ED22269B3300EFD786 /* LHInTheatersViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */; };
+		53CFB7F122269F0200EFD786 /* LHNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F022269F0200EFD786 /* LHNetwork.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +60,6 @@
 		53CFB755221E971300EFD786 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		53CFB768221EE0BB00EFD786 /* DoubanMovie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubanMovie.pch; sourceTree = "<group>"; };
 		53CFB76F221EE43700EFD786 /* StaticSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticSettings.h; sourceTree = "<group>"; };
-		53CFB770221EF2F400EFD786 /* LHNetworkHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNetworkHeaders.h; sourceTree = "<group>"; };
-		53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNetworkHeaders.m; sourceTree = "<group>"; };
 		53CFB773221EFB0A00EFD786 /* LHNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNavigationController.h; sourceTree = "<group>"; };
 		53CFB774221EFB0A00EFD786 /* LHNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNavigationController.m; sourceTree = "<group>"; };
 		53CFB778221F024F00EFD786 /* UIImage+JKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKColor.h"; sourceTree = "<group>"; };
@@ -118,6 +118,12 @@
 		53CFB7DD2226759A00EFD786 /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		53CFB7DF2226765C00EFD786 /* NSDictionary+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
 		53CFB7E02226765C00EFD786 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
+		53CFB7E8222699C500EFD786 /* LHMoiveList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHMoiveList.m; sourceTree = "<group>"; };
+		53CFB7E9222699C500EFD786 /* LHMoiveList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHMoiveList.h; sourceTree = "<group>"; };
+		53CFB7EB22269B3300EFD786 /* LHInTheatersViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHInTheatersViewModel.h; sourceTree = "<group>"; };
+		53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHInTheatersViewModel.m; sourceTree = "<group>"; };
+		53CFB7EF22269F0200EFD786 /* LHNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNetwork.h; sourceTree = "<group>"; };
+		53CFB7F022269F0200EFD786 /* LHNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNetwork.m; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +202,7 @@
 		53CFB760221EC1C500EFD786 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB7EE22269D5000EFD786 /* Network */,
 				53CFB7A6221FE30E00EFD786 /* Music */,
 				53CFB7A2221FCC9F00EFD786 /* Reader */,
 				53CFB767221EDF9C00EFD786 /* Base */,
@@ -302,8 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				53CFB76F221EE43700EFD786 /* StaticSettings.h */,
-				53CFB770221EF2F400EFD786 /* LHNetworkHeaders.h */,
-				53CFB771221EF2F400EFD786 /* LHNetworkHeaders.m */,
 			);
 			path = StaticSettings;
 			sourceTree = "<group>";
@@ -338,6 +343,8 @@
 		53CFB7B022262C9F00EFD786 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB7E9222699C500EFD786 /* LHMoiveList.h */,
+				53CFB7E8222699C500EFD786 /* LHMoiveList.m */,
 				53CFB7C12226337200EFD786 /* LHSimpleMovie.h */,
 				53CFB7C02226337200EFD786 /* LHSimpleMovie.m */,
 				53CFB7BD2226324400EFD786 /* LHMovieDetail.h */,
@@ -351,8 +358,19 @@
 		53CFB7C922263A5D00EFD786 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB7EB22269B3300EFD786 /* LHInTheatersViewModel.h */,
+				53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		53CFB7EE22269D5000EFD786 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB7EF22269F0200EFD786 /* LHNetwork.h */,
+				53CFB7F022269F0200EFD786 /* LHNetwork.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
@@ -483,6 +501,7 @@
 				53CFB798221F8A1F00EFD786 /* LHInTheatersViewControlloer.m in Sources */,
 				53CFB7DB2226720C00EFD786 /* LHModel.m in Sources */,
 				53CFB7BF2226324400EFD786 /* LHMovieDetail.m in Sources */,
+				53CFB7EA222699C500EFD786 /* LHMoiveList.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
 				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,
 				53CFB7CF2226689000EFD786 /* LHView.m in Sources */,
@@ -498,11 +517,13 @@
 				53CFB77D221F026D00EFD786 /* UIImage+JKOrientation.m in Sources */,
 				53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */,
 				53CFB7E12226765C00EFD786 /* NSDictionary+Log.m in Sources */,
+				53CFB7ED22269B3300EFD786 /* LHInTheatersViewModel.m in Sources */,
 				53CFB756221E971300EFD786 /* main.m in Sources */,
 				53CFB783221F02B600EFD786 /* UIImage+JKBlur.m in Sources */,
 				53CFB79E221F8AA100EFD786 /* LHMineViewController.m in Sources */,
 				53CFB789221F03A800EFD786 /* UIButton+JKSubmitting.m in Sources */,
 				53CFB7CC22263AEA00EFD786 /* LHTableViewController.m in Sources */,
+				53CFB7F122269F0200EFD786 /* LHNetwork.m in Sources */,
 				53CFB748221E971100EFD786 /* AppDelegate.m in Sources */,
 				53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */,
 				53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */,
@@ -511,7 +532,6 @@
 				53CFB7C82226348100EFD786 /* LHRating.m in Sources */,
 				53CFB7D2222668A700EFD786 /* LHTableViewCell.m in Sources */,
 				53CFB7DE2226759A00EFD786 /* NSArray+Log.m in Sources */,
-				53CFB772221EF2F400EFD786 /* LHNetworkHeaders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
