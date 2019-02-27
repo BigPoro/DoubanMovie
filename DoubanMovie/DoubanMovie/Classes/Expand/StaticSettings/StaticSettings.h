@@ -59,11 +59,14 @@
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/1]
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
 
-#define kGray_one      RGBCOLOR(147,147,147)
-#define kGgray_tow     RGBCOLOR(49,49,49)
+#define kGray_one       RGBCOLOR(243,243,243)
+#define kGray_two       RGBCOLOR(219,219,219)
+#define kGray_three     RGBCOLOR(190,190,190)
+#define kGray_four      RGBCOLOR(147,147,147)
+#define kGray_five      RGBCOLOR(49,49,53)
 
-#define kWhite_one      RGBCOLOR(255,255,255)
-#define kWhite_two      RGBCOLOR(251,251,251)
+#define kWhite_one    RGBCOLOR(255,255,255)
+#define kWhite_two    RGBCOLOR(251,251,251)
 /**
  宏定义的固定方法
  

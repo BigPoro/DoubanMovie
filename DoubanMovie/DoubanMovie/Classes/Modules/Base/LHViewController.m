@@ -16,17 +16,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    /// 设置按钮的排他性
+    [[UIButton appearance] setExclusiveTouch:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// MARK: -- 导航栏设置
+- (void)setNavigationTitle:(NSString *)navigationTitle
+{
+    _navigationTitle = navigationTitle;
+    if (navigationTitle.length) {
+        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 100, 44)];
+        title.font = [UIFont systemFontOfSize:18];
+        title.textColor = [UIColor blackColor];
+        title.backgroundColor = [UIColor clearColor];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.text = navigationTitle;
+        
+        self.navigationItem.titleView = title;
+    }
 }
-*/
 
+- (void)setNavigationAttrTitle:(NSAttributedString *)navigationAttrTitle
+{
+    _navigationAttrTitle = navigationAttrTitle;
+    if (_navigationAttrTitle.length) {
+        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 100, 44)];
+        title.font = [UIFont systemFontOfSize:18];
+        title.backgroundColor = [UIColor clearColor];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.attributedText = navigationAttrTitle;
+        self.navigationItem.titleView = title;
+    }
+}
+
+- (void)bindViewModel
+{
+    
+}
 @end

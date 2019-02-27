@@ -31,6 +31,17 @@
 		53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7A4221FCCB300EFD786 /* LHReaderViewController.m */; };
 		53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7A8221FE31C00EFD786 /* LHMusicViewController.m */; };
 		53CFB7AD221FFE1E00EFD786 /* LHReaderPlusBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7AC221FFE1E00EFD786 /* LHReaderPlusBtn.m */; };
+		53CFB7BF2226324400EFD786 /* LHMovieDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7BE2226324400EFD786 /* LHMovieDetail.m */; };
+		53CFB7C22226337200EFD786 /* LHSimpleMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7C02226337200EFD786 /* LHSimpleMovie.m */; };
+		53CFB7C82226348100EFD786 /* LHRating.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7C72226348100EFD786 /* LHRating.m */; };
+		53CFB7CC22263AEA00EFD786 /* LHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7CB22263AEA00EFD786 /* LHTableViewController.m */; };
+		53CFB7CF2226689000EFD786 /* LHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7CE2226689000EFD786 /* LHView.m */; };
+		53CFB7D2222668A700EFD786 /* LHTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7D1222668A700EFD786 /* LHTableViewCell.m */; };
+		53CFB7D522266C4700EFD786 /* UITableViewCell+selected.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7D422266C4600EFD786 /* UITableViewCell+selected.m */; };
+		53CFB7D822266F9200EFD786 /* LHViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7D722266F9200EFD786 /* LHViewModel.m */; };
+		53CFB7DB2226720C00EFD786 /* LHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7DA2226720C00EFD786 /* LHModel.m */; };
+		53CFB7DE2226759A00EFD786 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7DD2226759A00EFD786 /* NSArray+Log.m */; };
+		53CFB7E12226765C00EFD786 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7E02226765C00EFD786 /* NSDictionary+Log.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +96,28 @@
 		53CFB7A8221FE31C00EFD786 /* LHMusicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMusicViewController.m; sourceTree = "<group>"; };
 		53CFB7AB221FFE1E00EFD786 /* LHReaderPlusBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHReaderPlusBtn.h; sourceTree = "<group>"; };
 		53CFB7AC221FFE1E00EFD786 /* LHReaderPlusBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHReaderPlusBtn.m; sourceTree = "<group>"; };
+		53CFB7BD2226324400EFD786 /* LHMovieDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHMovieDetail.h; sourceTree = "<group>"; };
+		53CFB7BE2226324400EFD786 /* LHMovieDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHMovieDetail.m; sourceTree = "<group>"; };
+		53CFB7C02226337200EFD786 /* LHSimpleMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSimpleMovie.m; sourceTree = "<group>"; };
+		53CFB7C12226337200EFD786 /* LHSimpleMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSimpleMovie.h; sourceTree = "<group>"; };
+		53CFB7C62226348100EFD786 /* LHRating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHRating.h; sourceTree = "<group>"; };
+		53CFB7C72226348100EFD786 /* LHRating.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHRating.m; sourceTree = "<group>"; };
+		53CFB7CA22263AEA00EFD786 /* LHTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHTableViewController.h; sourceTree = "<group>"; };
+		53CFB7CB22263AEA00EFD786 /* LHTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHTableViewController.m; sourceTree = "<group>"; };
+		53CFB7CD2226689000EFD786 /* LHView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHView.h; sourceTree = "<group>"; };
+		53CFB7CE2226689000EFD786 /* LHView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHView.m; sourceTree = "<group>"; };
+		53CFB7D0222668A700EFD786 /* LHTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHTableViewCell.h; sourceTree = "<group>"; };
+		53CFB7D1222668A700EFD786 /* LHTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHTableViewCell.m; sourceTree = "<group>"; };
+		53CFB7D322266C4600EFD786 /* UITableViewCell+selected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+selected.h"; sourceTree = "<group>"; };
+		53CFB7D422266C4600EFD786 /* UITableViewCell+selected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+selected.m"; sourceTree = "<group>"; };
+		53CFB7D622266F9200EFD786 /* LHViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHViewModel.h; sourceTree = "<group>"; };
+		53CFB7D722266F9200EFD786 /* LHViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHViewModel.m; sourceTree = "<group>"; };
+		53CFB7D92226720C00EFD786 /* LHModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHModel.h; sourceTree = "<group>"; };
+		53CFB7DA2226720C00EFD786 /* LHModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHModel.m; sourceTree = "<group>"; };
+		53CFB7DC2226759A00EFD786 /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		53CFB7DD2226759A00EFD786 /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		53CFB7DF2226765C00EFD786 /* NSDictionary+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
+		53CFB7E02226765C00EFD786 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +210,8 @@
 		53CFB761221EC2AC00EFD786 /* InTheaters */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB7C922263A5D00EFD786 /* ViewModel */,
+				53CFB7B022262C9F00EFD786 /* Model */,
 				53CFB796221F8A1F00EFD786 /* LHInTheatersViewControlloer.h */,
 				53CFB797221F8A1F00EFD786 /* LHInTheatersViewControlloer.m */,
 			);
@@ -218,6 +253,16 @@
 			children = (
 				53CFB793221F052B00EFD786 /* LHViewController.h */,
 				53CFB794221F052B00EFD786 /* LHViewController.m */,
+				53CFB7CA22263AEA00EFD786 /* LHTableViewController.h */,
+				53CFB7CB22263AEA00EFD786 /* LHTableViewController.m */,
+				53CFB7D0222668A700EFD786 /* LHTableViewCell.h */,
+				53CFB7D1222668A700EFD786 /* LHTableViewCell.m */,
+				53CFB7CD2226689000EFD786 /* LHView.h */,
+				53CFB7CE2226689000EFD786 /* LHView.m */,
+				53CFB7D622266F9200EFD786 /* LHViewModel.h */,
+				53CFB7D722266F9200EFD786 /* LHViewModel.m */,
+				53CFB7D92226720C00EFD786 /* LHModel.h */,
+				53CFB7DA2226720C00EFD786 /* LHModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -225,6 +270,8 @@
 		53CFB76C221EE3F100EFD786 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB7D322266C4600EFD786 /* UITableViewCell+selected.h */,
+				53CFB7D422266C4600EFD786 /* UITableViewCell+selected.m */,
 				53CFB778221F024F00EFD786 /* UIImage+JKColor.h */,
 				53CFB779221F024F00EFD786 /* UIImage+JKColor.m */,
 				53CFB77B221F026D00EFD786 /* UIImage+JKOrientation.h */,
@@ -243,6 +290,10 @@
 				53CFB78D221F03E100EFD786 /* NSDate+JKExtension.m */,
 				53CFB790221F03F200EFD786 /* NSDate+JKLunarCalendar.h */,
 				53CFB791221F03F200EFD786 /* NSDate+JKLunarCalendar.m */,
+				53CFB7DC2226759A00EFD786 /* NSArray+Log.h */,
+				53CFB7DD2226759A00EFD786 /* NSArray+Log.m */,
+				53CFB7DF2226765C00EFD786 /* NSDictionary+Log.h */,
+				53CFB7E02226765C00EFD786 /* NSDictionary+Log.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -282,6 +333,26 @@
 				53CFB7AC221FFE1E00EFD786 /* LHReaderPlusBtn.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		53CFB7B022262C9F00EFD786 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB7C12226337200EFD786 /* LHSimpleMovie.h */,
+				53CFB7C02226337200EFD786 /* LHSimpleMovie.m */,
+				53CFB7BD2226324400EFD786 /* LHMovieDetail.h */,
+				53CFB7BE2226324400EFD786 /* LHMovieDetail.m */,
+				53CFB7C62226348100EFD786 /* LHRating.h */,
+				53CFB7C72226348100EFD786 /* LHRating.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53CFB7C922263A5D00EFD786 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
@@ -410,25 +481,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				53CFB798221F8A1F00EFD786 /* LHInTheatersViewControlloer.m in Sources */,
+				53CFB7DB2226720C00EFD786 /* LHModel.m in Sources */,
+				53CFB7BF2226324400EFD786 /* LHMovieDetail.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
 				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,
+				53CFB7CF2226689000EFD786 /* LHView.m in Sources */,
 				53CFB795221F052B00EFD786 /* LHViewController.m in Sources */,
 				53CFB78E221F03E100EFD786 /* NSDate+JKUtilities.m in Sources */,
 				53CFB780221F029F00EFD786 /* UIImage+JKRemoteSize.m in Sources */,
 				53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */,
+				53CFB7D822266F9200EFD786 /* LHViewModel.m in Sources */,
 				53CFB7A1221F90A700EFD786 /* LHTabBarControllerConfig.m in Sources */,
+				53CFB7D522266C4700EFD786 /* UITableViewCell+selected.m in Sources */,
+				53CFB7C22226337200EFD786 /* LHSimpleMovie.m in Sources */,
 				53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */,
 				53CFB77D221F026D00EFD786 /* UIImage+JKOrientation.m in Sources */,
 				53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */,
+				53CFB7E12226765C00EFD786 /* NSDictionary+Log.m in Sources */,
 				53CFB756221E971300EFD786 /* main.m in Sources */,
 				53CFB783221F02B600EFD786 /* UIImage+JKBlur.m in Sources */,
 				53CFB79E221F8AA100EFD786 /* LHMineViewController.m in Sources */,
 				53CFB789221F03A800EFD786 /* UIButton+JKSubmitting.m in Sources */,
+				53CFB7CC22263AEA00EFD786 /* LHTableViewController.m in Sources */,
 				53CFB748221E971100EFD786 /* AppDelegate.m in Sources */,
 				53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */,
 				53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */,
 				53CFB7AD221FFE1E00EFD786 /* LHReaderPlusBtn.m in Sources */,
 				53CFB79B221F8A5800EFD786 /* LHMainSearchViewController.m in Sources */,
+				53CFB7C82226348100EFD786 /* LHRating.m in Sources */,
+				53CFB7D2222668A700EFD786 /* LHTableViewCell.m in Sources */,
+				53CFB7DE2226759A00EFD786 /* NSArray+Log.m in Sources */,
 				53CFB772221EF2F400EFD786 /* LHNetworkHeaders.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LHViewController : UIViewController
+/// 导航栏设置
+@property (nonatomic, copy) NSString *navigationTitle;
+@property (nonatomic, copy) NSAttributedString *navigationAttrTitle;
 
+- (void)bindViewModel;
 @end
 
 NS_ASSUME_NONNULL_END

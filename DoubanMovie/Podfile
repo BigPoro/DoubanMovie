@@ -13,7 +13,9 @@ pod 'SMPageControl'
 pod 'MJExtension'
 pod 'SVProgressHUD'
 pod 'CYLTabBarController'
+pod 'DZNEmptyDataSet'
 
-
-
+#权限管理
+pod 'LBXPermission/Base'
+pod 'LBXPermission/Location'
 end

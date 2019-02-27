@@ -11,5 +11,10 @@
 
 #import "StaticSettings.h"
 
+// 第三方工具
+#import <MJExtension.h>
+#import <SVProgressHUD.h>
+// Tools
 #import "UIImage+JKColor.h"
+
 #endif /* DoubanMovie_pch */

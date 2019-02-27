@@ -30,7 +30,10 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - CYLTabBarController (1.17.22)
+  - DZNEmptyDataSet (1.8.1)
   - IQKeyboardManager (5.0.8)
+  - LBXPermission/Base (1.0.5)
+  - LBXPermission/Location (1.0.5)
   - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
@@ -51,7 +54,10 @@ DEPENDENCIES:
   - AFNetworking
   - BlocksKit
   - CYLTabBarController
+  - DZNEmptyDataSet
   - IQKeyboardManager (~> 5.0)
+  - LBXPermission/Base
+  - LBXPermission/Location
   - Masonry
   - MJExtension
   - MJRefresh
@@ -65,7 +71,9 @@ SPEC REPOS:
     - AFNetworking
     - BlocksKit
     - CYLTabBarController
+    - DZNEmptyDataSet
     - IQKeyboardManager
+    - LBXPermission
     - Masonry
     - MJExtension
     - MJRefresh
@@ -87,7 +95,9 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
+  LBXPermission: e03503500e9540efb75d5f206b82a1a760fd0b26
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
@@ -96,6 +106,6 @@ SPEC CHECKSUMS:
   SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 06337c0f19756b21f4aca817e8bcaeb518cdb2b7
+PODFILE CHECKSUM: 98a324745be453bee05bd246086a21893f75895e
 
 COCOAPODS: 1.5.0

@@ -44,6 +44,11 @@
     [button addTarget:button action:@selector(clickPublish) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
+// 可以在此调整按钮的布局
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+}
 #pragma mark - Event Response
 
 - (void)clickPublish
