@@ -9,34 +9,20 @@
 #import "LHViewModel.h"
 
 @interface LHViewModel ()
-@property (nonatomic, strong, readwrite) RACSubject *dataSignal;
-@property (nonatomic, strong, readwrite) RACSubject *errorSignal;
-@property (nonatomic, strong, readwrite) RACSubject *successSignal;
+
 @end
 
 @implementation LHViewModel
 
-
-- (RACSubject *)successSignal {
-    if (!_successSignal) {
-        _successSignal = [RACSubject subject];
+- (NSMutableArray *)dataSource
+{
+    if (!_dataSource) {
+        _dataSource = [NSMutableArray array];
     }
-    return _successSignal;
+    return _dataSource;
 }
 
-- (RACSubject *)dataSignal {
-    if (!_dataSignal) {
-        _dataSignal = [RACSubject subject];
-    }
-    return _dataSignal;
-}
 
-- (RACSubject *)errorSignal {
-    if (!_errorSignal) {
-        _errorSignal = [RACSubject subject];
-    }
-    return _errorSignal;
-}
 /**
  取消获取数据
  */

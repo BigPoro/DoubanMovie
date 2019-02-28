@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setupUI;
 
-- (void)bindViewModel;
+- (void)setCellData:(id)data;
 @end
 
 NS_ASSUME_NONNULL_END

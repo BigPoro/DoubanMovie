@@ -7,13 +7,17 @@
 }
 + (NSDictionary *)mj_objectClassInArray
 {
-    return @{@"genres": @"LHCast",
+    return @{@"casts": @"LHCast",
              @"directors": @"LHCast"
              };
 }
 @end
 
 @implementation LHCast
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"identifier":@"id"};
+}
 @end
 
 @implementation LHImages

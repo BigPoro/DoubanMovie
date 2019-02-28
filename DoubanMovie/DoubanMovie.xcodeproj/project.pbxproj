@@ -45,6 +45,8 @@
 		53CFB7ED22269B3300EFD786 /* LHInTheatersViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */; };
 		53CFB7F122269F0200EFD786 /* LHNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F022269F0200EFD786 /* LHNetwork.m */; };
 		53CFB7F42227740900EFD786 /* NSObject+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F32227740900EFD786 /* NSObject+ViewController.m */; };
+		53CFB7F72227C7C900EFD786 /* LHInTheatersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F62227C7C900EFD786 /* LHInTheatersCell.m */; };
+		53CFB7FB2227C7F600EFD786 /* LHComingSoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7FA2227C7F600EFD786 /* LHComingSoonCell.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,10 @@
 		53CFB7F022269F0200EFD786 /* LHNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNetwork.m; sourceTree = "<group>"; };
 		53CFB7F22227740900EFD786 /* NSObject+ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewController.h"; sourceTree = "<group>"; };
 		53CFB7F32227740900EFD786 /* NSObject+ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewController.m"; sourceTree = "<group>"; };
+		53CFB7F52227C7C900EFD786 /* LHInTheatersCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHInTheatersCell.h; sourceTree = "<group>"; };
+		53CFB7F62227C7C900EFD786 /* LHInTheatersCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHInTheatersCell.m; sourceTree = "<group>"; };
+		53CFB7F92227C7F600EFD786 /* LHComingSoonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHComingSoonCell.h; sourceTree = "<group>"; };
+		53CFB7FA2227C7F600EFD786 /* LHComingSoonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHComingSoonCell.m; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +226,7 @@
 		53CFB761221EC2AC00EFD786 /* InTheaters */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB7F82227C7CF00EFD786 /* View */,
 				53CFB7C922263A5D00EFD786 /* ViewModel */,
 				53CFB7B022262C9F00EFD786 /* Model */,
 				53CFB796221F8A1F00EFD786 /* LHInTheatersViewControlloer.h */,
@@ -378,6 +385,17 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		53CFB7F82227C7CF00EFD786 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB7F52227C7C900EFD786 /* LHInTheatersCell.h */,
+				53CFB7F62227C7C900EFD786 /* LHInTheatersCell.m */,
+				53CFB7F92227C7F600EFD786 /* LHComingSoonCell.h */,
+				53CFB7FA2227C7F600EFD786 /* LHComingSoonCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +534,7 @@
 				53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */,
 				53CFB7D822266F9200EFD786 /* LHViewModel.m in Sources */,
 				53CFB7A1221F90A700EFD786 /* LHTabBarControllerConfig.m in Sources */,
+				53CFB7F72227C7C900EFD786 /* LHInTheatersCell.m in Sources */,
 				53CFB7D522266C4700EFD786 /* UITableViewCell+selected.m in Sources */,
 				53CFB7C22226337200EFD786 /* LHSimpleMovie.m in Sources */,
 				53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */,
@@ -536,6 +555,7 @@
 				53CFB7AD221FFE1E00EFD786 /* LHReaderPlusBtn.m in Sources */,
 				53CFB79B221F8A5800EFD786 /* LHMainSearchViewController.m in Sources */,
 				53CFB7C82226348100EFD786 /* LHRating.m in Sources */,
+				53CFB7FB2227C7F600EFD786 /* LHComingSoonCell.m in Sources */,
 				53CFB7D2222668A700EFD786 /* LHTableViewCell.m in Sources */,
 				53CFB7DE2226759A00EFD786 /* NSArray+Log.m in Sources */,
 			);
@@ -680,6 +700,7 @@
 			baseConfigurationReference = 330BB965ABD1567CDC761C8A /* Pods-DoubanMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLHK86ZFY6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -701,6 +722,7 @@
 			baseConfigurationReference = 8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NLHK86ZFY6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

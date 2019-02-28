@@ -15,7 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *navigationTitle;
 @property (nonatomic, copy) NSAttributedString *navigationAttrTitle;
 
+- (void)setupUI;
+
 - (void)bindViewModel;
+
 @end
 
 NS_ASSUME_NONNULL_END

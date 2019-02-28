@@ -17,11 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = kWhite_one;
     /// 设置按钮的排他性
     [[UIButton appearance] setExclusiveTouch:YES];
     
     [self adapterTheScrollViewAndTableView];
     
+    [self setupUI];
 }
 - (void)adapterTheScrollViewAndTableView
 {
@@ -67,4 +69,9 @@
 {
     
 }
+- (void)setupUI
+{
+    
+}
+
 @end

@@ -15,6 +15,8 @@ typedef NS_ENUM(NSInteger, LHNetworkMethodType) {
     LHNetworkMethodDELETE
 };
 
+static NSInteger const kCount = 10;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LHNetwork : NSObject

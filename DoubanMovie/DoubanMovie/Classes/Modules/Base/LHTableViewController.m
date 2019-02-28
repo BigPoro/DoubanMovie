@@ -12,12 +12,12 @@
 @implementation LHTableViewController
 
 //MARK: -- Init
-- (NSMutableArray *)dataSource
+- (LHViewModel *)viewModel
 {
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray array];
+    if (!_viewModel) {
+        _viewModel = [LHViewModel new];
     }
-    return _dataSource;
+    return _viewModel;
 }
 
 - (instancetype)initWithStyle:(UITableViewStyle )style
@@ -71,32 +71,6 @@
     
     [self.view addSubview:_tableView];
 }
-//MARK: -- RefreshSetting
-- (void)setupRefresh
-{
-    [self setupRefreshHeader];
-    [self setupRefreshFooter];
-}
-
-- (void)setupRefreshHeader
-{
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-}
-
-- (void)setupRefreshFooter
-{
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-}
-
-- (void)loadNewData
-{
-    
-}
-
-- (void)loadMoreData
-{
-    
-}
 
 //MARK: TableView Delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -105,7 +79,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSource.count;
+    return self.viewModel.dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -140,7 +114,7 @@
 }
 
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
-    if (self.dataSource.count == 0) {
+    if (self.viewModel.dataSource.count == 0) {
         return YES;
     }else {
         return NO;

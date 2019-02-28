@@ -14,7 +14,7 @@ pod 'MJExtension'
 pod 'SVProgressHUD'
 pod 'CYLTabBarController'
 pod 'DZNEmptyDataSet'
-
+pod 'HCSStarRatingView', '~> 1.5'
 #权限管理
 pod 'LBXPermission/Base'
 pod 'LBXPermission/Location'

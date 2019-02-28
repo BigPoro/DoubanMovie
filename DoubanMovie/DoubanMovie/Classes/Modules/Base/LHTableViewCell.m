@@ -24,10 +24,11 @@
 {
     
 }
-- (void)bindViewModel
+- (void)setCellData:(id)data
 {
     
 }
+
 
 
 @end

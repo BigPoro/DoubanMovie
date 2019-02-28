@@ -1,9 +1,8 @@
 #import "LHModel.h"
-
+#import "LHRating.h"
 @class LHSimpleMovie;
 @class LHCast;
 @class LHImages;
-@class LHRating;
 
 NS_ASSUME_NONNULL_BEGIN
 

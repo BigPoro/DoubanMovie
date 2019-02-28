@@ -14,6 +14,7 @@
 {
     if (self = [super init]) {
         [self setupUI];
+        [self bindViewModel];
     }
     return self;
 }
