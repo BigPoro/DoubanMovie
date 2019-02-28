@@ -13,7 +13,6 @@ static NSString * const kWebHostHeader = @"https://api.douban.com/v2";
 static LHNetwork *_instance = nil;
 static dispatch_once_t onceToken;
 
-//kWebHostHeader
 @interface LHNetwork()
 @property (strong, nonatomic) AFHTTPSessionManager *manager;
 
@@ -63,6 +62,15 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
+- (RACSignal *)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params
+{
+    @weakify(self);
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        [self executeURLRequest:service methodType:networkMethodType params:params send:subscriber];
+        return nil;
+    }];
+}
 #pragma mark - core function , private method
 /**
  核心网络URL请求函数 (需要对返回结果进行处理)
@@ -70,9 +78,9 @@ static dispatch_once_t onceToken;
  @param service 资源层(非接口字段)
  @param networkMethodType 请求类型:GET/POST/PUT/DELETE
  @param params 所需传递参数
- @param callback 返回结果的回调
+ @param subscriber 返回结果的信号
  */
-- (void)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params callback:(void(^)(id response))callback
+- (void)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params send:(id <RACSubscriber>)subscriber
 {
     //设置url
     NSString *url = [kWebHostHeader stringByAppendingString:@"/"];
@@ -89,14 +97,14 @@ static dispatch_once_t onceToken;
     {
         case LHNetworkMethodGET:
         {
-            
             [self.manager GET:url parameters:paramsDictionary progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
-              
-                
+                [subscriber sendNext:jsonDic];
+                [subscriber sendCompleted];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 debug_NSLog(@"error:%@,error.description:%@", error, error.description);
-                
+                 [self handleTheFailurefullNetWorkResult];
+                [subscriber sendError:error];
             }];
         }
             break;
@@ -104,10 +112,14 @@ static dispatch_once_t onceToken;
         {
             [self.manager POST:url parameters:paramsDictionary progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
-                
+                [subscriber sendNext:jsonDic];
+                [subscriber sendCompleted];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 debug_NSLog(@"error:%@,error.description:%@", error, error.description);
-                
+                [self handleTheFailurefullNetWorkResult];
+
+                [subscriber sendError:error];
+
             }];
         }
             break;
@@ -115,10 +127,12 @@ static dispatch_once_t onceToken;
         {
             [self.manager PUT:url parameters:paramsDictionary success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
-               
+                [subscriber sendNext:jsonDic];
+                [subscriber sendCompleted];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 debug_NSLog(@"error:%@,error.description:%@", error, error.description);
-                
+                [self handleTheFailurefullNetWorkResult];
+                [subscriber sendError:error];
             }];
         }
             break;
@@ -126,15 +140,32 @@ static dispatch_once_t onceToken;
         {
             [self.manager DELETE:url parameters:paramsDictionary success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
-               
+                [subscriber sendNext:jsonDic];
+                [subscriber sendCompleted];
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 debug_NSLog(@"error:%@,error.description:%@", error, error.description);
-               
+                [subscriber sendError:error];
+                [self handleTheFailurefullNetWorkResult];
             }];
         }
             break;
         default:
             break;
+    }
+}
+- (void)handleTheFailurefullNetWorkResult
+{
+    UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"Surprise" message:@"The request failed" preferredStyle:UIAlertControllerStyleAlert];
+    [vc addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+    [[self getAppPresentingViewController] presentViewController:vc animated:YES completion:nil];
+}
+/**
+ 取消网络请求
+ */
+- (void)cancelRequest
+{
+    if (self.manager.tasks.count > 0) {
+        [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     }
 }
 @end

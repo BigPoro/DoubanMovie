@@ -44,6 +44,7 @@
 		53CFB7EA222699C500EFD786 /* LHMoiveList.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7E8222699C500EFD786 /* LHMoiveList.m */; };
 		53CFB7ED22269B3300EFD786 /* LHInTheatersViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */; };
 		53CFB7F122269F0200EFD786 /* LHNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F022269F0200EFD786 /* LHNetwork.m */; };
+		53CFB7F42227740900EFD786 /* NSObject+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F32227740900EFD786 /* NSObject+ViewController.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHInTheatersViewModel.m; sourceTree = "<group>"; };
 		53CFB7EF22269F0200EFD786 /* LHNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNetwork.h; sourceTree = "<group>"; };
 		53CFB7F022269F0200EFD786 /* LHNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHNetwork.m; sourceTree = "<group>"; };
+		53CFB7F22227740900EFD786 /* NSObject+ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ViewController.h"; sourceTree = "<group>"; };
+		53CFB7F32227740900EFD786 /* NSObject+ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ViewController.m"; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,6 +282,8 @@
 			children = (
 				53CFB7D322266C4600EFD786 /* UITableViewCell+selected.h */,
 				53CFB7D422266C4600EFD786 /* UITableViewCell+selected.m */,
+				53CFB7F22227740900EFD786 /* NSObject+ViewController.h */,
+				53CFB7F32227740900EFD786 /* NSObject+ViewController.m */,
 				53CFB778221F024F00EFD786 /* UIImage+JKColor.h */,
 				53CFB779221F024F00EFD786 /* UIImage+JKColor.m */,
 				53CFB77B221F026D00EFD786 /* UIImage+JKOrientation.h */,
@@ -523,6 +528,7 @@
 				53CFB79E221F8AA100EFD786 /* LHMineViewController.m in Sources */,
 				53CFB789221F03A800EFD786 /* UIButton+JKSubmitting.m in Sources */,
 				53CFB7CC22263AEA00EFD786 /* LHTableViewController.m in Sources */,
+				53CFB7F42227740900EFD786 /* NSObject+ViewController.m in Sources */,
 				53CFB7F122269F0200EFD786 /* LHNetwork.m in Sources */,
 				53CFB748221E971100EFD786 /* AppDelegate.m in Sources */,
 				53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */,

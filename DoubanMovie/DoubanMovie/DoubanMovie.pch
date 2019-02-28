@@ -16,5 +16,6 @@
 #import <SVProgressHUD.h>
 // Tools
 #import "UIImage+JKColor.h"
+#import "NSObject+ViewController.h"
 
 #endif /* DoubanMovie_pch */

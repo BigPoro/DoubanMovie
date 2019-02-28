@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <ReactiveCocoa.h>
 typedef NS_ENUM(NSInteger, LHNetworkMethodType) {
     LHNetworkMethodGET = 0,
     LHNetworkMethodPOST,
@@ -27,15 +27,18 @@ NS_ASSUME_NONNULL_BEGIN
 + (LHNetwork *)shared;
 
 /**
- 核心网络URL请求函数 (需要对返回结果进行处理)
- 
- @param service 资源层(非接口字段)
- @param networkMethodType 请求类型:GET/POST/PUT/DELETE
- @param params 所需传递参数
- @param callback 返回结果的回调
- */
-- (void)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params callback:(void(^)(id response))callback;
+ 发出网络请求
 
+ @param service 资源路径
+ @param networkMethodType 请求方式
+ @param params 请求参数
+ @return 返回信号 订阅后发送结果
+ */
+- (RACSignal *)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params;
+/**
+ 取消网络请求
+ */
+- (void)cancelRequest;
 @end
 
 NS_ASSUME_NONNULL_END
