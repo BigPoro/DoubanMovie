@@ -21,6 +21,7 @@
     [[UIButton appearance] setExclusiveTouch:YES];
     
     [self adapterTheScrollViewAndTableView];
+    
 }
 - (void)adapterTheScrollViewAndTableView
 {

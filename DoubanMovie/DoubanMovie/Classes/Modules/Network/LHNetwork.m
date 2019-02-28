@@ -62,12 +62,12 @@ static dispatch_once_t onceToken;
     return _instance;
 }
 
-- (RACSignal *)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params
+- (RACSignal *)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *__nullable)params
 {
     @weakify(self);
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self);
-        [self executeURLRequest:service methodType:networkMethodType params:params send:subscriber];
+        [self executeURLRequest:service methodType:networkMethodType params:params subscriber:subscriber];
         return nil;
     }];
 }
@@ -80,7 +80,7 @@ static dispatch_once_t onceToken;
  @param params 所需传递参数
  @param subscriber 返回结果的信号
  */
-- (void)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params send:(id <RACSubscriber>)subscriber
+- (void)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params subscriber:(id <RACSubscriber>)subscriber
 {
     //设置url
     NSString *url = [kWebHostHeader stringByAppendingString:@"/"];

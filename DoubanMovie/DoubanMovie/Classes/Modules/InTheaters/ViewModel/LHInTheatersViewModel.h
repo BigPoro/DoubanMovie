@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LHInTheatersViewModel : LHViewModel
 
+@property(nonatomic, strong, readonly) RACCommand *getInTheatersMoives;
+@property(nonatomic, strong, readonly) RACCommand *getComingSoonMoives;
+
 @end
 
 NS_ASSUME_NONNULL_END

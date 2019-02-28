@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param params 请求参数
  @return 返回信号 订阅后发送结果
  */
-- (RACSignal *)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary *)params;
+- (RACSignal *)executeURLRequest:(NSString *)service methodType:(LHNetworkMethodType)networkMethodType params:(NSDictionary * __nullable)params;
 /**
  取消网络请求
  */

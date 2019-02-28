@@ -41,7 +41,7 @@
 		53CFB7DB2226720C00EFD786 /* LHModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7DA2226720C00EFD786 /* LHModel.m */; };
 		53CFB7DE2226759A00EFD786 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7DD2226759A00EFD786 /* NSArray+Log.m */; };
 		53CFB7E12226765C00EFD786 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7E02226765C00EFD786 /* NSDictionary+Log.m */; };
-		53CFB7EA222699C500EFD786 /* LHMoiveList.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7E8222699C500EFD786 /* LHMoiveList.m */; };
+		53CFB7EA222699C500EFD786 /* LHMovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7E8222699C500EFD786 /* LHMovieList.m */; };
 		53CFB7ED22269B3300EFD786 /* LHInTheatersViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */; };
 		53CFB7F122269F0200EFD786 /* LHNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F022269F0200EFD786 /* LHNetwork.m */; };
 		53CFB7F42227740900EFD786 /* NSObject+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F32227740900EFD786 /* NSObject+ViewController.m */; };
@@ -119,8 +119,8 @@
 		53CFB7DD2226759A00EFD786 /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		53CFB7DF2226765C00EFD786 /* NSDictionary+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
 		53CFB7E02226765C00EFD786 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
-		53CFB7E8222699C500EFD786 /* LHMoiveList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHMoiveList.m; sourceTree = "<group>"; };
-		53CFB7E9222699C500EFD786 /* LHMoiveList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHMoiveList.h; sourceTree = "<group>"; };
+		53CFB7E8222699C500EFD786 /* LHMovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHMovieList.m; sourceTree = "<group>"; };
+		53CFB7E9222699C500EFD786 /* LHMovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHMovieList.h; sourceTree = "<group>"; };
 		53CFB7EB22269B3300EFD786 /* LHInTheatersViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHInTheatersViewModel.h; sourceTree = "<group>"; };
 		53CFB7EC22269B3300EFD786 /* LHInTheatersViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHInTheatersViewModel.m; sourceTree = "<group>"; };
 		53CFB7EF22269F0200EFD786 /* LHNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHNetwork.h; sourceTree = "<group>"; };
@@ -348,8 +348,8 @@
 		53CFB7B022262C9F00EFD786 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				53CFB7E9222699C500EFD786 /* LHMoiveList.h */,
-				53CFB7E8222699C500EFD786 /* LHMoiveList.m */,
+				53CFB7E9222699C500EFD786 /* LHMovieList.h */,
+				53CFB7E8222699C500EFD786 /* LHMovieList.m */,
 				53CFB7C12226337200EFD786 /* LHSimpleMovie.h */,
 				53CFB7C02226337200EFD786 /* LHSimpleMovie.m */,
 				53CFB7BD2226324400EFD786 /* LHMovieDetail.h */,
@@ -506,7 +506,7 @@
 				53CFB798221F8A1F00EFD786 /* LHInTheatersViewControlloer.m in Sources */,
 				53CFB7DB2226720C00EFD786 /* LHModel.m in Sources */,
 				53CFB7BF2226324400EFD786 /* LHMovieDetail.m in Sources */,
-				53CFB7EA222699C500EFD786 /* LHMoiveList.m in Sources */,
+				53CFB7EA222699C500EFD786 /* LHMovieList.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
 				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,
 				53CFB7CF2226689000EFD786 /* LHView.m in Sources */,

@@ -1,6 +1,6 @@
-#import "LHMoiveList.h"
+#import "LHMovieList.h"
 
-@implementation LHMoiveList
+@implementation LHMovieList
 + (NSDictionary *)mj_objectClassInArray
 {
     return @{@"subjects": @"LHSimpleMovie"
