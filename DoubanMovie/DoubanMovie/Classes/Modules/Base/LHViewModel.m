@@ -22,6 +22,26 @@
     return _dataSource;
 }
 
+- (RACSubject *)successSignal {
+    if (!_successSignal) {
+        _successSignal = [RACSubject subject];
+    }
+    return _successSignal;
+}
+
+- (RACSubject *)dataSignal {
+    if (!_dataSignal) {
+        _dataSignal = [RACSubject subject];
+    }
+    return _dataSignal;
+}
+
+- (RACSubject *)errorSignal {
+    if (!_errorSignal) {
+        _errorSignal = [RACSubject subject];
+    }
+    return _errorSignal;
+}
 
 /**
  取消获取数据

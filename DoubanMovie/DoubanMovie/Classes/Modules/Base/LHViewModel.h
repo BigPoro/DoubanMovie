@@ -10,8 +10,8 @@
 #import <ReactiveCocoa.h>
 #import "LHNetwork.h"
 typedef NS_ENUM(NSInteger,LHRefreshDataStatus){
-    LHFooterRefresh_HasMoreData, ///上拉还有更多数据
-    LHFooterRefresh_HasNoMoreData, ///上拉没有更多数据
+    LHFooterRefresh_HasMoreData = 1, ///上拉还有更多数据
+    LHFooterRefresh_HasNoMoreData = 2 ///上拉没有更多数据
 };
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, nullable) NSMutableArray *dataSource;
 
+@property (nonatomic, strong, nullable) RACSubject *dataSignal;
 
+@property (nonatomic, strong, nullable) RACSubject *errorSignal;
+@property (nonatomic, strong, nullable) RACSubject *successSignal;
 /**
  取消获取数据
  */

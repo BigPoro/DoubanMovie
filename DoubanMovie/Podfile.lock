@@ -38,6 +38,7 @@ PODS:
   - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
   - MJRefresh (3.1.15.7)
+  - PYSearch (0.9.1)
   - ReactiveCocoa (2.5.2):
     - ReactiveCocoa/UI (= 2.5.2)
   - ReactiveCocoa/Core (2.5.2):
@@ -48,7 +49,6 @@ PODS:
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
   - SDWebImage/Core (4.4.5)
-  - SMPageControl (1.2)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -63,9 +63,9 @@ DEPENDENCIES:
   - Masonry
   - MJExtension
   - MJRefresh
+  - PYSearch
   - ReactiveCocoa (from `https://github.com/zhao0/ReactiveCocoa.git`, tag `2.5.2`)
   - SDWebImage
-  - SMPageControl
   - SVProgressHUD
 
 SPEC REPOS:
@@ -80,8 +80,8 @@ SPEC REPOS:
     - Masonry
     - MJExtension
     - MJRefresh
+    - PYSearch
     - SDWebImage
-    - SMPageControl
     - SVProgressHUD
 
 EXTERNAL SOURCES:
@@ -105,11 +105,11 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  PYSearch: 76dee18eea3309b60921a5d6a69390a63a5dda15
   ReactiveCocoa: 3ff25b1bd992ac79c5c79b26b6c0c1713b715bb2
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
-  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 3c60a86ce6896692b24966466fbf71210882dd95
+PODFILE CHECKSUM: 7345ee44a98e11a2318eda5e35db6c987bc6db24
 
 COCOAPODS: 1.5.0

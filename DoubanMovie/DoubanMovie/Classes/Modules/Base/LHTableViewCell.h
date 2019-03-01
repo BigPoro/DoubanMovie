@@ -14,10 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 记录下标
 @property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) id cellData;
 
 - (void)setupUI;
 
-- (void)setCellData:(id)data;
 @end
 
 NS_ASSUME_NONNULL_END

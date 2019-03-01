@@ -30,7 +30,7 @@
     if (self.childViewControllers.count > 0) { // 如果viewController不是最早push进来的子控制器
         // 左上角
         UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [backButton setImage:IMAGE_NAME(@"ic_arrow_back_subject_24x24_") forState:UIControlStateNormal];
+        [backButton setImage:IMAGE_NAME(@"ic_arrow_back_24x24_") forState:UIControlStateNormal];
         [backButton sizeToFit];
         // 这句代码放在sizeToFit后面
         backButton.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);

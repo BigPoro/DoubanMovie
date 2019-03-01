@@ -3,7 +3,10 @@
 @implementation LHSimpleMovie
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
-    return @{@"identifier":@"id"};
+    return @{@"identifier":@"id",
+             @"collectCount":@"collect_count",
+             @"originalTitle":@"original_title"
+             };
 }
 + (NSDictionary *)mj_objectClassInArray
 {

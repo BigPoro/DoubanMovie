@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LHRating : LHModel
 @property (nonatomic, assign) NSInteger max;
-@property (nonatomic, copy)   NSString *average;
+@property (nonatomic, assign) CGFloat average;
 @property (nonatomic, assign) NSInteger numRaters;
 @property (nonatomic, assign) NSInteger min;
 @end

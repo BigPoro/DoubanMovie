@@ -10,7 +10,7 @@
 
 @implementation LHView
 
-- (instancetype)init
+- (instancetype)initWithViewModel:(id)viewModel
 {
     if (self = [super init]) {
         [self setupUI];
@@ -18,6 +18,7 @@
     }
     return self;
 }
+
 - (void)setupUI
 {
     

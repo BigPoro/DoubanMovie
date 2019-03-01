@@ -14,9 +14,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setupUI];
-        self.selectionStyle = UITableViewCellAccessoryNone;
     }
-    
     return self;
 }
 
@@ -26,7 +24,7 @@
 }
 - (void)setCellData:(id)data
 {
-    
+    _cellData = data;
 }
 
 

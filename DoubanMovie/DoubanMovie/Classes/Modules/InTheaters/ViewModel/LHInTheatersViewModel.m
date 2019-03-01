@@ -8,12 +8,18 @@
 
 #import "LHInTheatersViewModel.h"
 #import "LHMovieList.h"
+#import "LHMovieDetail.h"
 @interface LHInTheatersViewModel()
 
-@property (nonatomic, strong, readwrite) RACCommand *getInTheatersMoives;
-@property (nonatomic, strong, readwrite) RACCommand *getComingSoonMoives;
-@property (nonatomic, strong, readwrite) RACCommand *getNextComingSoonMoives;
-@property (nonatomic, strong, readwrite) RACSubject  *refreshEndSubject;
+@property (nonatomic, strong, readwrite) RACCommand *getInTheatersMovies;
+@property (nonatomic, strong, readwrite) RACCommand *getComingSoonMovies;
+@property (nonatomic, strong, readwrite) RACCommand *getNextComingSoonMovies;
+@property (nonatomic, strong, readwrite) RACCommand *getMovieDeteil;
+
+@property (nonatomic, strong, readwrite) RACSubject *refreshEndSubject;
+@property (nonatomic, strong, readwrite) RACSubject *InTheatersCellSubject;
+@property (nonatomic, strong, readwrite) RACSubject *ComingSoonCellSubject;
+@property (nonatomic, strong, readwrite) RACSubject *MovieItemSubject;
 
 @property (nonatomic, strong, readwrite) NSMutableArray *inTheatersData;
 @property (nonatomic, strong, readwrite) NSMutableArray *comingSoonData;
@@ -23,10 +29,10 @@
 
 @end
 @implementation LHInTheatersViewModel
-- (RACCommand *)getInTheatersMoives
+- (RACCommand *)getInTheatersMovies
 {
-    if (!_getInTheatersMoives) {
-        _getInTheatersMoives = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+    if (!_getInTheatersMovies) {
+        _getInTheatersMovies = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 [[[LHNetwork shared] executeURLRequest:@"movie/in_theaters" methodType:LHNetworkMethodGET params:nil] subscribeNext:^(id x) {
                     LHMovieList *movieList = [LHMovieList mj_objectWithKeyValues:x];
@@ -40,19 +46,28 @@
                 return nil;
             }];
         }];
+        
+        [[_getInTheatersMovies.executing skip:1] subscribeNext:^(id x) {
+            if ([x isEqualToNumber:@(YES)]) {
+                [SVProgressHUD showWithStatus:@"正在加载"];
+            }else{
+                [SVProgressHUD dismiss];
+            }
+        }];
+        
     }
-    return _getInTheatersMoives;
+    return _getInTheatersMovies;
 }
-- (RACCommand *)getComingSoonMoives
+- (RACCommand *)getComingSoonMovies
 {
-    if (!_getComingSoonMoives) {
+    if (!_getComingSoonMovies) {
         @weakify(self);
-        _getComingSoonMoives = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        _getComingSoonMovies = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self);
             
             self.currentPage = 0;
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-                NSMutableDictionary *params = [@{@"start":@(self.currentPage),@"count":@(kCount)} mutableCopy];
+                NSMutableDictionary *params = [@{@"start":@(self.currentPage),@"count":@(kPageCount)} mutableCopy];
                 [[[LHNetwork shared] executeURLRequest:@"movie/coming_soon" methodType:LHNetworkMethodGET params:params] subscribeNext:^(id x) {
                     LHMovieList *movieList = [LHMovieList mj_objectWithKeyValues:x];
                     /// 添加数据
@@ -66,22 +81,30 @@
                     [subscriber sendCompleted];
                 }error:^(NSError *error) {
                     [subscriber sendError:error];
+                    [SVProgressHUD dismiss];
+
                 }];
                 return nil;
             }];
         }];
+        [[_getComingSoonMovies.executing skip:1] subscribeNext:^(id x) {
+            if ([x isEqualToNumber:@(YES)]) {
+                [SVProgressHUD showWithStatus:@"正在加载"];
+            }else{
+                [SVProgressHUD dismiss];
+            }
+        }];
     }
-    return _getInTheatersMoives;
+    return _getComingSoonMovies;
 }
-- (RACCommand *)getNextComingSoonMoives
+- (RACCommand *)getNextComingSoonMovies
 {
-    if (!_getNextComingSoonMoives) {
+    if (!_getNextComingSoonMovies) {
         @weakify(self);
-        _getNextComingSoonMoives = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        _getNextComingSoonMovies = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self);
-            self.currentPage++;
-            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-                NSMutableDictionary *params = [@{@"start":@(self.currentPage),@"count":@(kCount)} mutableCopy];
+            return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                NSMutableDictionary *params = [@{@"start":@(self.currentPage),@"count":@(kPageCount)} mutableCopy];
                 [[[LHNetwork shared] executeURLRequest:@"movie/coming_soon" methodType:LHNetworkMethodGET params:params] subscribeNext:^(id x) {
                     LHMovieList *movieList = [LHMovieList mj_objectWithKeyValues:x];
                     /// 添加数据
@@ -95,12 +118,52 @@
                     [subscriber sendCompleted];
                 }error:^(NSError *error) {
                     [subscriber sendError:error];
+                    [SVProgressHUD dismiss];
+
                 }];
+                return nil;
+            }] doNext:^(id x) {
+                @strongify(self);
+                self.currentPage++;
+            }];
+        }];
+        [[_getNextComingSoonMovies.executing skip:1] subscribeNext:^(id x) {
+            if ([x isEqualToNumber:@(YES)]) {
+                [SVProgressHUD showWithStatus:@"正在加载"];
+            }else{
+                [SVProgressHUD dismiss];
+            }
+        }];
+    }
+    return _getNextComingSoonMovies;
+}
+
+- (RACCommand *)getMovieDeteil
+{
+    if (!_getMovieDeteil) {
+        _getMovieDeteil = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+                [[[LHNetwork shared] executeURLRequest:[NSString stringWithFormat:@"movie/subject/%@",self.movieID] methodType:LHNetworkMethodGET params:nil] subscribeNext:^(id x) {
+                    LHMovieDetail *movie = [LHMovieDetail mj_objectWithKeyValues:x];
+                    [subscriber sendNext:movie.mobile_url];
+                    [subscriber sendCompleted];
+                } error:^(NSError *error) {
+                    [subscriber sendError:error];
+                    [SVProgressHUD dismiss];
+
+                }] ;
                 return nil;
             }];
         }];
+        [[_getMovieDeteil.executing skip:1] subscribeNext:^(id x) {
+            if ([x isEqualToNumber:@(YES)]) {
+                [SVProgressHUD showWithStatus:@"正在加载"];
+            }else{
+                [SVProgressHUD dismiss];
+            }
+        }];
     }
-    return _getNextComingSoonMoives;
+    return _getMovieDeteil;
 }
 
 - (RACSubject *)refreshEndSubject
@@ -110,6 +173,16 @@
     }
     return _refreshEndSubject;
 }
+
+
+- (RACSubject *)MovieItemSubject
+{
+    if (!_MovieItemSubject) {
+        _MovieItemSubject = [RACSubject subject];
+    }
+    return _MovieItemSubject;
+}
+
 - (NSMutableArray *)inTheatersData
 {
     if (!_inTheatersData) {

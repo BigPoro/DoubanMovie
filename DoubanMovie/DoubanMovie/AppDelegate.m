@@ -8,6 +8,7 @@
 
 
 #import "AppDelegate.h"
+#import <IQKeyboardManager.h>
 #import "LHTabBarControllerConfig.h"
 
 @interface AppDelegate ()
@@ -18,10 +19,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self setupTheIQKeyboard];
     [self setupRootViewController];
+    
     return YES;
 }
-
+// 开启IQKeyboard
+- (void)setupTheIQKeyboard
+{
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.keyboardDistanceFromTextField = 45;
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = YES;
+}
 - (void)setupRootViewController
 {
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

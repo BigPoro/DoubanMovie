@@ -47,6 +47,8 @@
 		53CFB7F42227740900EFD786 /* NSObject+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F32227740900EFD786 /* NSObject+ViewController.m */; };
 		53CFB7F72227C7C900EFD786 /* LHInTheatersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7F62227C7C900EFD786 /* LHInTheatersCell.m */; };
 		53CFB7FB2227C7F600EFD786 /* LHComingSoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7FA2227C7F600EFD786 /* LHComingSoonCell.m */; };
+		53CFB8072229176C00EFD786 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB8062229176C00EFD786 /* HMSegmentedControl.m */; };
+		53CFB80D2229424D00EFD786 /* DBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB80B2229424D00EFD786 /* DBWebViewController.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,10 @@
 		53CFB7F62227C7C900EFD786 /* LHInTheatersCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHInTheatersCell.m; sourceTree = "<group>"; };
 		53CFB7F92227C7F600EFD786 /* LHComingSoonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHComingSoonCell.h; sourceTree = "<group>"; };
 		53CFB7FA2227C7F600EFD786 /* LHComingSoonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHComingSoonCell.m; sourceTree = "<group>"; };
+		53CFB8052229176C00EFD786 /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		53CFB8062229176C00EFD786 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		53CFB80B2229424D00EFD786 /* DBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBWebViewController.m; sourceTree = "<group>"; };
+		53CFB80C2229424D00EFD786 /* DBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBWebViewController.h; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -268,6 +274,8 @@
 		53CFB767221EDF9C00EFD786 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB80C2229424D00EFD786 /* DBWebViewController.h */,
+				53CFB80B2229424D00EFD786 /* DBWebViewController.m */,
 				53CFB793221F052B00EFD786 /* LHViewController.h */,
 				53CFB794221F052B00EFD786 /* LHViewController.m */,
 				53CFB7CA22263AEA00EFD786 /* LHTableViewController.h */,
@@ -388,6 +396,8 @@
 		53CFB7F82227C7CF00EFD786 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				53CFB8052229176C00EFD786 /* HMSegmentedControl.h */,
+				53CFB8062229176C00EFD786 /* HMSegmentedControl.m */,
 				53CFB7F52227C7C900EFD786 /* LHInTheatersCell.h */,
 				53CFB7F62227C7C900EFD786 /* LHInTheatersCell.m */,
 				53CFB7F92227C7F600EFD786 /* LHComingSoonCell.h */,
@@ -483,12 +493,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/PYSearch/PYSearch/PYSearch.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PYSearch.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,12 +536,14 @@
 				53CFB798221F8A1F00EFD786 /* LHInTheatersViewControlloer.m in Sources */,
 				53CFB7DB2226720C00EFD786 /* LHModel.m in Sources */,
 				53CFB7BF2226324400EFD786 /* LHMovieDetail.m in Sources */,
+				53CFB80D2229424D00EFD786 /* DBWebViewController.m in Sources */,
 				53CFB7EA222699C500EFD786 /* LHMovieList.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
 				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,
 				53CFB7CF2226689000EFD786 /* LHView.m in Sources */,
 				53CFB795221F052B00EFD786 /* LHViewController.m in Sources */,
 				53CFB78E221F03E100EFD786 /* NSDate+JKUtilities.m in Sources */,
+				53CFB8072229176C00EFD786 /* HMSegmentedControl.m in Sources */,
 				53CFB780221F029F00EFD786 /* UIImage+JKRemoteSize.m in Sources */,
 				53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */,
 				53CFB7D822266F9200EFD786 /* LHViewModel.m in Sources */,

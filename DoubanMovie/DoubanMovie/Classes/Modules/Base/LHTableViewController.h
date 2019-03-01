@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) LHViewModel *viewModel;
 // 初始化
 - (instancetype)initWithStyle:(UITableViewStyle)style;
-- (instancetype)init;
 
 
 @end

@@ -12,15 +12,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LHMovieDetail : NSObject
 @property (nonatomic, strong) LHRating *rating;
+@property (nonatomic, assign) NSInteger reviews_count;
+@property (nonatomic, assign) NSInteger wish_count;
+@property (nonatomic, copy)   NSString *douban_site;
+@property (nonatomic, copy)   NSString *year;
+@property (nonatomic, copy)   NSString *mobile_url;
+@property (nonatomic, copy)   NSString *do_count;
+@property (nonatomic, copy)   NSString *share_url;
+
 @property (nonatomic, copy)   NSArray<LHAuthor *> *author;
-@property (nonatomic, copy)   NSString *altTitle;
+@property (nonatomic, copy)   NSString *alt;
 @property (nonatomic, copy)   NSString *image;
 @property (nonatomic, copy)   NSString *title;
 @property (nonatomic, copy)   NSString *summary;
 @property (nonatomic, strong) LHAttrs *attrs;
 @property (nonatomic, copy)   NSString *identifier;
 @property (nonatomic, copy)   NSString *mobileLink;
-@property (nonatomic, copy)   NSString *alt;
+@property (nonatomic, copy)   NSString *altTitle;
 @property (nonatomic, copy)   NSArray<LHTag *> *tags;
 @end
 
