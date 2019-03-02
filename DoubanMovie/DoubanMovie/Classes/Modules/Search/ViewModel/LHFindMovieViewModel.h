@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LHFindMovieViewModel : LHViewModel
 
+@property (nonatomic, strong, readonly) RACCommand *getAllData;
+
 /// 口碑榜
 @property (nonatomic, strong, readonly) RACCommand *getWeeklyRating;
 /// 北美票房榜

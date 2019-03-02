@@ -10,6 +10,7 @@
 #import "LHMovieList.h"
 
 @interface LHFindMovieViewModel ()
+@property (nonatomic, strong, readwrite) RACCommand *getAllData;
 @property (nonatomic, strong, readwrite) RACCommand *getWeeklyRating;
 @property (nonatomic, strong, readwrite) RACCommand *getUSBoxRating;
 @property (nonatomic, strong, readwrite) RACCommand *getNewMoviesRating;
@@ -108,7 +109,7 @@
             }
         }];
     }
-    return _getWeeklyRating;
+    return _getNewMoviesRating;
 }
 - (RACCommand *)getTop250
 {
@@ -137,7 +138,11 @@
             }
         }];
     }
-    return _getUSBoxRating;
+    return _getTop250;
+}
+- (void)createRequestSignal
+{
+    
 }
 #pragma mark DataInit
 - (NSMutableArray *)weeklyRatingData
