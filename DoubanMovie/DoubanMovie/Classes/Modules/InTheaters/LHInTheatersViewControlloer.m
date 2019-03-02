@@ -67,7 +67,11 @@
         [self.comingSoonTableView.mj_header endRefreshing];
         [self.comingSoonTableView reloadData];
     }];
-
+    [self.mainViewModel.getNextComingSoonMovies.executionSignals.switchToLatest subscribeNext:^(id x) {
+        @strongify(self);
+        [self.comingSoonTableView.mj_footer endRefreshing];
+        [self.comingSoonTableView reloadData];
+    }];
     [self.mainViewModel.getMovieDeteil.executionSignals.switchToLatest subscribeNext:^(id x) {
        @strongify(self);
         DBWebViewController *vc = [[DBWebViewController alloc]init];
@@ -79,7 +83,8 @@
         LHRefreshDataStatus status = [x integerValue];
         switch (status) {
             case LHFooterRefresh_HasMoreData:{
-                self.comingSoonTableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
+            
+                self.comingSoonTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
                     [self.mainViewModel.getNextComingSoonMovies execute:nil];
                 }];
                 break;

@@ -103,7 +103,9 @@
         @weakify(self);
         _getNextComingSoonMovies = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self);
-            return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            self.currentPage++;
+
+            return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 NSMutableDictionary *params = [@{@"start":@(self.currentPage),@"count":@(kPageCount)} mutableCopy];
                 [[[LHNetwork shared] executeURLRequest:@"movie/coming_soon" methodType:LHNetworkMethodGET params:params] subscribeNext:^(id x) {
                     LHMovieList *movieList = [LHMovieList mj_objectWithKeyValues:x];
@@ -119,12 +121,9 @@
                 }error:^(NSError *error) {
                     [subscriber sendError:error];
                     [SVProgressHUD dismiss];
-
+                    
                 }];
                 return nil;
-            }] doNext:^(id x) {
-                @strongify(self);
-                self.currentPage++;
             }];
         }];
         [[_getNextComingSoonMovies.executing skip:1] subscribeNext:^(id x) {

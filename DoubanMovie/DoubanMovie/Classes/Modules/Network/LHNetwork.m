@@ -8,7 +8,7 @@
 
 #import "LHNetwork.h"
 #import <AFNetworking.h>
-static NSString * const kWebHostHeader = @"https://api.douban.com/v2";
+
 
 static LHNetwork *_instance = nil;
 static dispatch_once_t onceToken;

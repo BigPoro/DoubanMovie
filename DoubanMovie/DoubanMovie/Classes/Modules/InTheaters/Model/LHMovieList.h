@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger total;
 @property (nonatomic, copy)   NSArray <LHSimpleMovie *>*subjects;
 @property (nonatomic, copy)   NSString *title;
+@property (nonatomic, copy)   NSString *date;
 @end
 
 NS_ASSUME_NONNULL_END

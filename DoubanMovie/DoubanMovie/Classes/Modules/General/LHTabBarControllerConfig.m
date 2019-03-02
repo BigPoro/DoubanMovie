@@ -9,7 +9,7 @@
 #import "LHTabBarControllerConfig.h"
 #import "LHNavigationController.h"
 #import "LHMineViewController.h"
-#import "LHMainSearchViewController.h"
+#import "LHFindMovieViewController.h"
 #import "LHInTheatersViewControlloer.h"
 #import "LHReaderViewController.h"
 #import "LHMusicViewController.h"
@@ -119,7 +119,7 @@ static NSInteger const kSelectedCoverIndex = 0;
     LHNavigationController *firstNavigationController = [[LHNavigationController alloc]
                                                     initWithRootViewController:[[LHInTheatersViewControlloer alloc] init]];
     LHNavigationController *secondNavigationController = [[LHNavigationController alloc]
-                                                          initWithRootViewController:[[LHMainSearchViewController alloc] init]];
+                                                          initWithRootViewController:[[LHFindMovieViewController alloc] init]];
     
 //    LHNavigationController *thirdNavigationController = [[LHNavigationController alloc]
 //                                                          initWithRootViewController:[[LHReaderViewController alloc] init]];

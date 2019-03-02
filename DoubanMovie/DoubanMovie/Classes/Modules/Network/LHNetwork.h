@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa.h>
+
+static NSString * const kWebHostHeader = @"https://api.douban.com/v2";
+static NSString * const apikey = @"0df993c66c0c636e29ecbb5344252a4a";
+
 typedef NS_ENUM(NSInteger, LHNetworkMethodType) {
     LHNetworkMethodGET = 0,
     LHNetworkMethodPOST,

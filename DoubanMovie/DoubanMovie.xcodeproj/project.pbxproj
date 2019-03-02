@@ -24,7 +24,7 @@
 		53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB791221F03F200EFD786 /* NSDate+JKLunarCalendar.m */; };
 		53CFB795221F052B00EFD786 /* LHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB794221F052B00EFD786 /* LHViewController.m */; };
 		53CFB798221F8A1F00EFD786 /* LHInTheatersViewControlloer.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB797221F8A1F00EFD786 /* LHInTheatersViewControlloer.m */; };
-		53CFB79B221F8A5800EFD786 /* LHMainSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB79A221F8A5800EFD786 /* LHMainSearchViewController.m */; };
+		53CFB79B221F8A5800EFD786 /* LHFindMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB79A221F8A5800EFD786 /* LHFindMovieViewController.m */; };
 		53CFB79E221F8AA100EFD786 /* LHMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB79D221F8AA100EFD786 /* LHMineViewController.m */; };
 		53CFB7A1221F90A700EFD786 /* LHTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7A0221F90A700EFD786 /* LHTabBarControllerConfig.m */; };
 		53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7A4221FCCB300EFD786 /* LHReaderViewController.m */; };
@@ -49,6 +49,8 @@
 		53CFB7FB2227C7F600EFD786 /* LHComingSoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB7FA2227C7F600EFD786 /* LHComingSoonCell.m */; };
 		53CFB8072229176C00EFD786 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB8062229176C00EFD786 /* HMSegmentedControl.m */; };
 		53CFB80D2229424D00EFD786 /* DBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB80B2229424D00EFD786 /* DBWebViewController.m */; };
+		53CFB812222A227000EFD786 /* LHFindMovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB811222A227000EFD786 /* LHFindMovieViewModel.m */; };
+		53CFB815222A232700EFD786 /* LHFindMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB814222A232700EFD786 /* LHFindMovieCell.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -89,8 +91,8 @@
 		53CFB794221F052B00EFD786 /* LHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHViewController.m; sourceTree = "<group>"; };
 		53CFB796221F8A1F00EFD786 /* LHInTheatersViewControlloer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHInTheatersViewControlloer.h; sourceTree = "<group>"; };
 		53CFB797221F8A1F00EFD786 /* LHInTheatersViewControlloer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHInTheatersViewControlloer.m; sourceTree = "<group>"; };
-		53CFB799221F8A5800EFD786 /* LHMainSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMainSearchViewController.h; sourceTree = "<group>"; };
-		53CFB79A221F8A5800EFD786 /* LHMainSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMainSearchViewController.m; sourceTree = "<group>"; };
+		53CFB799221F8A5800EFD786 /* LHFindMovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHFindMovieViewController.h; sourceTree = "<group>"; };
+		53CFB79A221F8A5800EFD786 /* LHFindMovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHFindMovieViewController.m; sourceTree = "<group>"; };
 		53CFB79C221F8AA100EFD786 /* LHMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMineViewController.h; sourceTree = "<group>"; };
 		53CFB79D221F8AA100EFD786 /* LHMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMineViewController.m; sourceTree = "<group>"; };
 		53CFB79F221F90A700EFD786 /* LHTabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHTabBarControllerConfig.h; sourceTree = "<group>"; };
@@ -139,6 +141,10 @@
 		53CFB8062229176C00EFD786 /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
 		53CFB80B2229424D00EFD786 /* DBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBWebViewController.m; sourceTree = "<group>"; };
 		53CFB80C2229424D00EFD786 /* DBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBWebViewController.h; sourceTree = "<group>"; };
+		53CFB810222A227000EFD786 /* LHFindMovieViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHFindMovieViewModel.h; sourceTree = "<group>"; };
+		53CFB811222A227000EFD786 /* LHFindMovieViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHFindMovieViewModel.m; sourceTree = "<group>"; };
+		53CFB813222A232700EFD786 /* LHFindMovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHFindMovieCell.h; sourceTree = "<group>"; };
+		53CFB814222A232700EFD786 /* LHFindMovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHFindMovieCell.m; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,8 +250,10 @@
 		53CFB762221EC2BE00EFD786 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				53CFB799221F8A5800EFD786 /* LHMainSearchViewController.h */,
-				53CFB79A221F8A5800EFD786 /* LHMainSearchViewController.m */,
+				53CFB80F222A20CF00EFD786 /* ViewModel */,
+				53CFB80E222A20C600EFD786 /* View */,
+				53CFB799221F8A5800EFD786 /* LHFindMovieViewController.h */,
+				53CFB79A221F8A5800EFD786 /* LHFindMovieViewController.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -406,6 +414,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		53CFB80E222A20C600EFD786 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB813222A232700EFD786 /* LHFindMovieCell.h */,
+				53CFB814222A232700EFD786 /* LHFindMovieCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53CFB80F222A20CF00EFD786 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				53CFB810222A227000EFD786 /* LHFindMovieViewModel.h */,
+				53CFB811222A227000EFD786 /* LHFindMovieViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +565,7 @@
 				53CFB80D2229424D00EFD786 /* DBWebViewController.m in Sources */,
 				53CFB7EA222699C500EFD786 /* LHMovieList.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
+				53CFB815222A232700EFD786 /* LHFindMovieCell.m in Sources */,
 				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,
 				53CFB7CF2226689000EFD786 /* LHView.m in Sources */,
 				53CFB795221F052B00EFD786 /* LHViewController.m in Sources */,
@@ -567,7 +594,8 @@
 				53CFB78F221F03E100EFD786 /* NSDate+JKExtension.m in Sources */,
 				53CFB77A221F024F00EFD786 /* UIImage+JKColor.m in Sources */,
 				53CFB7AD221FFE1E00EFD786 /* LHReaderPlusBtn.m in Sources */,
-				53CFB79B221F8A5800EFD786 /* LHMainSearchViewController.m in Sources */,
+				53CFB812222A227000EFD786 /* LHFindMovieViewModel.m in Sources */,
+				53CFB79B221F8A5800EFD786 /* LHFindMovieViewController.m in Sources */,
 				53CFB7C82226348100EFD786 /* LHRating.m in Sources */,
 				53CFB7FB2227C7F600EFD786 /* LHComingSoonCell.m in Sources */,
 				53CFB7D2222668A700EFD786 /* LHTableViewCell.m in Sources */,

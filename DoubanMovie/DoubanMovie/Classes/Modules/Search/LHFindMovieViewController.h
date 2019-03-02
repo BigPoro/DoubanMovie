@@ -1,5 +1,5 @@
 //
-//  LHMainSearchViewController.h
+//  LHFindMovieViewController.h
 //  DoubanMovie
 //
 //  Created by iDog on 2019/2/22.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LHMainSearchViewController : LHViewController
+@interface LHFindMovieViewController : LHViewController
 
 @end
 
