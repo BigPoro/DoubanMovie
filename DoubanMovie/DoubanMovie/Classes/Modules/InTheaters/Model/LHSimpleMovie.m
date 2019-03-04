@@ -23,6 +23,4 @@
 }
 @end
 
-@implementation LHImages
-@end
 

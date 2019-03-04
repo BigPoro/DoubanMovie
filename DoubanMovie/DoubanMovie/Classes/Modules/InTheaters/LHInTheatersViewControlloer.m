@@ -60,22 +60,26 @@
         [self.inTheatersTableView reloadData];
         
     }] ;
+    // 即将上映
     [self.mainViewModel.getComingSoonMovies.executionSignals.switchToLatest subscribeNext:^(id x) {
         @strongify(self);
         [self.comingSoonTableView.mj_header endRefreshing];
         [self.comingSoonTableView reloadData];
     }];
+    // 即将上映 加载更多
     [self.mainViewModel.getNextComingSoonMovies.executionSignals.switchToLatest subscribeNext:^(id x) {
         @strongify(self);
         [self.comingSoonTableView.mj_footer endRefreshing];
         [self.comingSoonTableView reloadData];
     }];
+    // 获取电影详情
     [self.mainViewModel.getMovieDeteil.executionSignals.switchToLatest subscribeNext:^(id x) {
        @strongify(self);
         DBWebViewController *vc = [[DBWebViewController alloc]init];
         vc.URLString = x ;
         [self.navigationController pushViewController:vc animated:YES];
     }];
+    // 控制刷新尾
     [self.mainViewModel.refreshEndSubject subscribeNext:^(id x) {
         @strongify(self);
         LHRefreshDataStatus status = [x integerValue];
@@ -94,11 +98,21 @@
     }];
     [self.mainViewModel.getInTheatersMovies execute:@(1)];
     [self.mainViewModel.getComingSoonMovies execute:@(1)];
-
-    [self.mainViewModel.MovieItemSubject subscribeNext:^(id x) {
+    
+    // 点击了cell
+    [self.mainViewModel.movieItemSubject subscribeNext:^(id x) {
         @strongify(self);
         self.mainViewModel.movieID = x;
         [self.mainViewModel.getMovieDeteil execute:@(0)];
+    }];
+    // 购票
+    [self.mainViewModel.buyTicketsSubject subscribeNext:^(id x) {
+        @strongify(self);
+        DBWebViewController *vc = [[DBWebViewController alloc]init];
+        // 拼接一个猫眼的URL
+        NSString *url = [NSString stringWithFormat:@"https://m.maoyan.com/cinema/movie/%@",x];
+        vc.URLString = url;
+        [self.navigationController pushViewController:vc animated:YES];
     }];
 }
 //MARK: -- UI
@@ -198,6 +212,10 @@
         }
         [cell setCellData:self.mainViewModel.inTheatersData[indexPath.row]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        kWeakSelf;
+        cell.buyTicketsBlock = ^(NSString * _Nonnull identifier) {
+            [weakSelf.mainViewModel.buyTicketsSubject sendNext:identifier];
+        };
         return cell;
     }else{
         LHComingSoonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ComingSoonCell"];
@@ -213,7 +231,7 @@
 {
     LHTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     LHSimpleMovie *movie = [LHSimpleMovie mj_objectWithKeyValues:cell.cellData];
-    [self.mainViewModel.MovieItemSubject sendNext:movie.identifier];
+    [self.mainViewModel.movieItemSubject sendNext:movie.identifier];
 }
 
 @end

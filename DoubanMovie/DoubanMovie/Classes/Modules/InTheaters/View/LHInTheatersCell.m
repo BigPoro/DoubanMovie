@@ -51,6 +51,7 @@
 
 - (void)setupUI
 {
+    @weakify(self);
     UIImageView *iv = [UIImageView new];
     [self.contentView addSubview:iv];
     _posterView = iv;
@@ -124,6 +125,14 @@
     [buyBtn setTitle:@"购票" forState:UIControlStateNormal];
     [buyBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     buyBtn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    
+    [[buyBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        @strongify(self);
+        if (self.buyTicketsBlock) {
+            LHSimpleMovie *movie = (LHSimpleMovie *)self.cellData;
+            self.buyTicketsBlock(movie.identifier);
+        }
+    }];
     [self.contentView addSubview:buyBtn];
     [buyBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(60, 25));

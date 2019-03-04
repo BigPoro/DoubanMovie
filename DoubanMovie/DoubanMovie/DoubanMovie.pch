@@ -19,6 +19,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
 #import <RACEXTScope.h>
+#import <ReactiveCocoa.h>
 
 // Tools
 #import "UIImage+JKColor.h"

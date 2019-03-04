@@ -19,7 +19,9 @@
 @property (nonatomic, strong, readwrite) RACSubject *refreshEndSubject;
 @property (nonatomic, strong, readwrite) RACSubject *InTheatersCellSubject;
 @property (nonatomic, strong, readwrite) RACSubject *ComingSoonCellSubject;
-@property (nonatomic, strong, readwrite) RACSubject *MovieItemSubject;
+@property (nonatomic, strong, readwrite) RACSubject *movieItemSubject;
+@property (nonatomic, strong, readwrite) RACSubject *buyTicketsSubject;
+
 
 @property (nonatomic, strong, readwrite) NSMutableArray *inTheatersData;
 @property (nonatomic, strong, readwrite) NSMutableArray *comingSoonData;
@@ -150,7 +152,7 @@
                     [subscriber sendError:error];
                     [SVProgressHUD dismiss];
 
-                }] ;
+                }];
                 return nil;
             }];
         }];
@@ -172,14 +174,20 @@
     }
     return _refreshEndSubject;
 }
-
-
-- (RACSubject *)MovieItemSubject
+- (RACSubject *)buyTicketsSubject
 {
-    if (!_MovieItemSubject) {
-        _MovieItemSubject = [RACSubject subject];
+    if (!_buyTicketsSubject) {
+        _buyTicketsSubject = [RACSubject subject];
     }
-    return _MovieItemSubject;
+    return _buyTicketsSubject;
+}
+
+- (RACSubject *)movieItemSubject
+{
+    if (!_movieItemSubject) {
+        _movieItemSubject = [RACSubject subject];
+    }
+    return _movieItemSubject;
 }
 
 - (NSMutableArray *)inTheatersData

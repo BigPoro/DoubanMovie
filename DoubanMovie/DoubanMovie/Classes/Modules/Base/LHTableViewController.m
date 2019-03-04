@@ -102,6 +102,10 @@
 - (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView {
     return kGray_one;
 }
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return IMAGE_NAME(@"empty_124x136_");
+}
 
 // 返回详情文字
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {

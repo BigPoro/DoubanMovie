@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 记录下标
 @property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, strong) id cellData;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LHInTheatersCell : LHTableViewCell
 
+@property (nonatomic, copy) void(^buyTicketsBlock)(NSString *identifier);
+
 @end
 
 NS_ASSUME_NONNULL_END

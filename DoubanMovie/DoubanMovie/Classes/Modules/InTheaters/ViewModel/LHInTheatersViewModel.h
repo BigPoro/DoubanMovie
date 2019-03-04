@@ -19,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) RACCommand *getMovieDeteil;
 
 @property (nonatomic, strong, readonly) RACSubject *refreshEndSubject;
-@property (nonatomic, strong, readonly) RACSubject *MovieItemSubject;
+@property (nonatomic, strong, readonly) RACSubject *movieItemSubject;
+@property (nonatomic, strong, readonly) RACSubject *buyTicketsSubject;
 
 @property (nonatomic, strong, readonly) NSMutableArray *inTheatersData;
 @property (nonatomic, strong, readonly) NSMutableArray *comingSoonData;

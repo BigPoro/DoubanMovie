@@ -13,6 +13,3 @@
 @implementation LHAuthor
 @end
 
-
-@implementation LHTag
-@end

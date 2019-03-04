@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)   NSString *do_count;
 @property (nonatomic, copy)   NSString *share_url;
 
-@property (nonatomic, copy)   NSArray<LHAuthor *> *author;
+@property (nonatomic, strong) NSArray<LHAuthor *> *author;
 @property (nonatomic, copy)   NSString *alt;
 @property (nonatomic, copy)   NSString *image;
 @property (nonatomic, copy)   NSString *title;
@@ -29,31 +29,24 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)   NSString *identifier;
 @property (nonatomic, copy)   NSString *mobileLink;
 @property (nonatomic, copy)   NSString *altTitle;
-@property (nonatomic, copy)   NSArray<LHTag *> *tags;
+@property (nonatomic, strong) NSArray<LHTag *> *tags;
 @end
 
 @interface LHAttrs : NSObject
-@property (nonatomic, copy) NSArray<NSString *> *language;
-@property (nonatomic, copy) NSArray<NSString *> *pubdate;
-@property (nonatomic, copy) NSArray<NSString *> *title;
-@property (nonatomic, copy) NSArray<NSString *> *country;
-@property (nonatomic, copy) NSArray<NSString *> *writer;
-@property (nonatomic, copy) NSArray<NSString *> *director;
-@property (nonatomic, copy) NSArray<NSString *> *cast;
-@property (nonatomic, copy) NSArray<NSString *> *movieDuration;
-@property (nonatomic, copy) NSArray<NSString *> *year;
-@property (nonatomic, copy) NSArray<NSString *> *movieType;
+@property (nonatomic, strong) NSArray<NSString *> *language;
+@property (nonatomic, strong) NSArray<NSString *> *pubdate;
+@property (nonatomic, strong) NSArray<NSString *> *title;
+@property (nonatomic, strong) NSArray<NSString *> *country;
+@property (nonatomic, strong) NSArray<NSString *> *writer;
+@property (nonatomic, strong) NSArray<NSString *> *director;
+@property (nonatomic, strong) NSArray<NSString *> *cast;
+@property (nonatomic, strong) NSArray<NSString *> *movieDuration;
+@property (nonatomic, strong) NSArray<NSString *> *year;
+@property (nonatomic, strong) NSArray<NSString *> *movieType;
 @end
 
 @interface LHAuthor : NSObject
 @property (nonatomic, copy) NSString *name;
-@end
-
-
-
-@interface LHTag : NSObject
-@property (nonatomic, assign) NSInteger count;
-@property (nonatomic, copy)   NSString *name;
 @end
 
 NS_ASSUME_NONNULL_END

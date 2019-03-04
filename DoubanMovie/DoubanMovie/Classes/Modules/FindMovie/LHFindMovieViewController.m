@@ -7,6 +7,8 @@
 //
 
 #import "LHFindMovieViewController.h"
+#import <UIScrollView+EmptyDataSet.h>
+
 #import "View/LHFindMovieCell.h"
 #import "ViewModel/LHFindMovieViewModel.h"
 #import "Model/LHMovieRankingList.h"
@@ -15,7 +17,9 @@
 <
     UICollectionViewDelegate,
     UICollectionViewDataSource,
-    UISearchBarDelegate
+    UISearchBarDelegate,
+    DZNEmptyDataSetSource,
+    DZNEmptyDataSetDelegate
 >
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) LHFindMovieViewModel *mainViewModel;
@@ -87,6 +91,8 @@
 
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
+    _collectionView.emptyDataSetSource = self;
+    _collectionView.emptyDataSetDelegate = self;
     _collectionView.backgroundColor = kWhite_one;
     _collectionView.contentInset = UIEdgeInsetsMake(2 * kMargin, 2 * kMargin, 2 * kMargin, 2 * kMargin);
     [_collectionView registerClass:[LHFindMovieCell class] forCellWithReuseIdentifier:@"MovieCell"];
@@ -204,6 +210,20 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     return CGSizeMake(kScreenW, 50);
+}
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return IMAGE_NAME(@"empty_124x136_");
+}
+// 返回详情文字
+- (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView {
+    NSString *text = @"暂无数据";
+    NSMutableParagraphStyle *paragraph = [NSMutableParagraphStyle new];
+    paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+    paragraph.alignment = NSTextAlignmentCenter;
+    NSDictionary *attribute = @{NSFontAttributeName: [UIFont systemFontOfSize:16.0f], NSForegroundColorAttributeName: [UIColor lightGrayColor], NSParagraphStyleAttributeName: paragraph};
+    return [[NSAttributedString alloc] initWithString:text attributes:attribute];
 }
 
 @end
