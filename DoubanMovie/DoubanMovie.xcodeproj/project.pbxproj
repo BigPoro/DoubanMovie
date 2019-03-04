@@ -856,7 +856,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NLHK86ZFY6;
+				DEVELOPMENT_TEAM = KVBC39645D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMovie/DoubanMovie.pch";
 				INFOPLIST_FILE = DoubanMovie/Info.plist;
@@ -865,7 +865,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iDog.DoubanMovie;
+				PRODUCT_BUNDLE_IDENTIFIER = idoghuan.DoubanMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -878,7 +878,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NLHK86ZFY6;
+				DEVELOPMENT_TEAM = KVBC39645D;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DoubanMovie/DoubanMovie.pch";
 				INFOPLIST_FILE = DoubanMovie/Info.plist;
@@ -887,7 +887,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iDog.DoubanMovie;
+				PRODUCT_BUNDLE_IDENTIFIER = idoghuan.DoubanMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
