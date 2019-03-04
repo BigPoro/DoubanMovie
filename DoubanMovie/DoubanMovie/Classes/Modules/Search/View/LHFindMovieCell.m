@@ -45,14 +45,15 @@
     _posterView = iv;
     [_posterView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.contentView);
+        make.size.mas_equalTo(CGSizeMake(90, 120));
     }];
     UILabel *title = [UILabel new];
     [self.contentView addSubview:title];
-    title.font = [UIFont boldSystemFontOfSize:16];
+    title.font = [UIFont boldSystemFontOfSize:14];
     title.textColor = kGray_five;
     _titleLabel = title;
     [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_posterView).offset(kMargin);
+        make.top.equalTo(_posterView.mas_bottom).offset(kMargin);
         make.left.equalTo(_posterView);
         make.right.equalTo(self.contentView);
     }];
@@ -67,8 +68,8 @@
     _starRatingView = starRatingView;
     [_starRatingView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_titleLabel);
-        make.top.equalTo(_titleLabel.mas_bottom).offset(8);
-        make.size.mas_equalTo(CGSizeMake(80, 15));
+        make.top.equalTo(_titleLabel.mas_bottom).offset(4);
+        make.size.mas_equalTo(CGSizeMake(70, 15));
     }];
     
     UILabel *rating = [UILabel new];
@@ -78,7 +79,7 @@
     _ratingLabel = rating;
     [_ratingLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(_starRatingView);
-        make.left.equalTo(_starRatingView.mas_right);
+        make.left.equalTo(_starRatingView.mas_right).offset(4);
     }];
     
 }

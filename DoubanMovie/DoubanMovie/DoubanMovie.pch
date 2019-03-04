@@ -24,4 +24,8 @@
 #import "UIImage+JKColor.h"
 #import "NSObject+ViewController.h"
 
+
+#import "DBWebViewController.h"
+#import <PYSearch.h>
+
 #endif /* DoubanMovie_pch */

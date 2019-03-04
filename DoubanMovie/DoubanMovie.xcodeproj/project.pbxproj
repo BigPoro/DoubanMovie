@@ -51,6 +51,7 @@
 		53CFB80D2229424D00EFD786 /* DBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB80B2229424D00EFD786 /* DBWebViewController.m */; };
 		53CFB812222A227000EFD786 /* LHFindMovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB811222A227000EFD786 /* LHFindMovieViewModel.m */; };
 		53CFB815222A232700EFD786 /* LHFindMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53CFB814222A232700EFD786 /* LHFindMovieCell.m */; };
+		53FD6324222CC7C6004866AA /* LHMovieRankingList.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD6323222CC7C6004866AA /* LHMovieRankingList.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,8 @@
 		53CFB811222A227000EFD786 /* LHFindMovieViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHFindMovieViewModel.m; sourceTree = "<group>"; };
 		53CFB813222A232700EFD786 /* LHFindMovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHFindMovieCell.h; sourceTree = "<group>"; };
 		53CFB814222A232700EFD786 /* LHFindMovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHFindMovieCell.m; sourceTree = "<group>"; };
+		53FD6322222CC7C6004866AA /* LHMovieRankingList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMovieRankingList.h; sourceTree = "<group>"; };
+		53FD6323222CC7C6004866AA /* LHMovieRankingList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMovieRankingList.m; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +253,7 @@
 		53CFB762221EC2BE00EFD786 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				53FD6326222CC7D8004866AA /* Model */,
 				53CFB80F222A20CF00EFD786 /* ViewModel */,
 				53CFB80E222A20C600EFD786 /* View */,
 				53CFB799221F8A5800EFD786 /* LHFindMovieViewController.h */,
@@ -432,6 +436,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		53FD6326222CC7D8004866AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53FD6322222CC7C6004866AA /* LHMovieRankingList.h */,
+				53FD6323222CC7C6004866AA /* LHMovieRankingList.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +577,7 @@
 				53CFB7BF2226324400EFD786 /* LHMovieDetail.m in Sources */,
 				53CFB80D2229424D00EFD786 /* DBWebViewController.m in Sources */,
 				53CFB7EA222699C500EFD786 /* LHMovieList.m in Sources */,
+				53FD6324222CC7C6004866AA /* LHMovieRankingList.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
 				53CFB815222A232700EFD786 /* LHFindMovieCell.m in Sources */,
 				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,

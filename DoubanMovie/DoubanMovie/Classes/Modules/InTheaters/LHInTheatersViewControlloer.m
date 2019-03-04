@@ -7,12 +7,10 @@
 //
 
 #import "LHInTheatersViewControlloer.h"
-#import "DBWebViewController.h"
 #import "LHInTheatersViewModel.h"
 #import "LHInTheatersCell.h"
 #import "View/LHComingSoonCell.h"
 #import "View/HMSegmentedControl.h"
-#import <PYSearch.h>
 #import "LHSimpleMovie.h"
 
 @interface LHInTheatersViewControlloer ()

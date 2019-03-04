@@ -9,10 +9,13 @@
 #import "LHFindMovieViewController.h"
 #import "View/LHFindMovieCell.h"
 #import "ViewModel/LHFindMovieViewModel.h"
+#import "Model/LHMovieRankingList.h"
+
 @interface LHFindMovieViewController ()
 <
     UICollectionViewDelegate,
-    UICollectionViewDataSource
+    UICollectionViewDataSource,
+    UISearchBarDelegate
 >
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) LHFindMovieViewModel *mainViewModel;
@@ -34,56 +37,87 @@
 {
     [super viewDidLoad];
 
-    [self setupUI];
     [self bindViewModel];
 }
 - (void)bindViewModel
 {
-    RACSignal *signalOne = self.mainViewModel.getWeeklyRating.executionSignals.switchToLatest;
-    
-    RACSignal *signalTwo = self.mainViewModel.getNewMoviesRating.executionSignals.switchToLatest;
-    
-    RACSignal *signalThree = self.mainViewModel.getUSBoxRating.executionSignals.switchToLatest;
-    
-    RACSignal *signalFour = self.mainViewModel.getTop250.executionSignals.switchToLatest;
-  
-
-    [self.mainViewModel.getWeeklyRating execute:@(0)];
-    [self.mainViewModel.getNewMoviesRating execute:@(0)];
-    [self.mainViewModel.getUSBoxRating execute:@(0)];
-    [self.mainViewModel.getTop250 execute:@(0)];
-
-//    RACSignal *combineSignal = [[[signalOne combineLatestWith:signalTwo] combineLatestWith:signalThree] combineLatestWith:signalFour];
-    
-    [self rac_liftSelector:@selector(reloadCollectionViewWithDataOne:dataTwo:dataThree:dataFour:) withSignalsFromArray:@[signalOne, signalTwo, signalThree, signalFour]];
-
-//
-//    [combineSignal subscribeNext:^(id x) {
-//        debug_NSLog(@"%@",x);
-//    }];
+    @weakify(self);
+    [self.mainViewModel.getAllData.executionSignals.switchToLatest subscribeNext:^(id x) {
+    }];
+    [self.mainViewModel.getAllData execute:@(1)];
+    [[self.mainViewModel.getAllData.executing skip:1] subscribeNext:^(id x) {
+        @strongify(self);
+        if ([x isEqualToNumber: @(YES)]) {
+            [SVProgressHUD showWithStatus:@"正在加载推荐的电影"];
+            self.collectionView.hidden = YES;
+        }else{
+            [SVProgressHUD dismiss];
+            self.collectionView.hidden = NO;
+        }
+    }];
+    [self.mainViewModel.refreshSubject subscribeNext:^(id x) {
+        @strongify(self);
+        [self.collectionView reloadData];
+    }];
+    [self.mainViewModel.getMovieDeteil.executionSignals.switchToLatest subscribeNext:^(id x) {
+        @strongify(self);
+        DBWebViewController *vc = [[DBWebViewController alloc]init];
+        vc.URLString = x ;
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    [self.mainViewModel.movieItemSubject subscribeNext:^(id x) {
+        @strongify(self);
+        self.mainViewModel.movieID = x;
+        [self.mainViewModel.getMovieDeteil execute:@(1)];
+    }];
 }
-- (void)reloadCollectionViewWithDataOne:(id)dataOne dataTwo:(id)dataTwo dataThree:(id)dataThree dataFour:(id)dataFour
-{
-    [self.collectionView reloadData];
-}
+
 #pragma mark UI
 - (void)setupUI
 {
+    [super setupUI];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.minimumLineSpacing = 2 * kMargin;
     layout.minimumInteritemSpacing = 2 * kMargin;
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     layout.footerReferenceSize = CGSizeMake(kScreenW, 10);
+    
+    layout.itemSize = CGSizeMake(90, 160);
     _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 10, kScreenW, kScreenH - kNavigationBarHeight - kTabbarHeight) collectionViewLayout:layout];
 
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
     _collectionView.backgroundColor = kWhite_one;
+    _collectionView.contentInset = UIEdgeInsetsMake(2 * kMargin, 2 * kMargin, 2 * kMargin, 2 * kMargin);
     [_collectionView registerClass:[LHFindMovieCell class] forCellWithReuseIdentifier:@"MovieCell"];
      [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"sectionHeaderView"];
     [self.view addSubview:_collectionView];
+    
+    //MARK: 搜索栏
+    UIView *titleView = [UIView new];
+    UISearchBar *searchBar = [[UISearchBar alloc]init];
+    searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    searchBar.placeholder = @"电影/电视剧/影人";
+    [titleView addSubview:searchBar];
+    [searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(titleView);
+        make.size.mas_equalTo(CGSizeMake(kScreenW - 50, 38));
+    }];
+    searchBar.delegate = self;
+    self.navigationItem.titleView = titleView;
 }
-
+#pragma mark UISearchBar Delegate
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    PYSearchViewController *searchViewController = [PYSearchViewController searchViewControllerWithHotSearches:nil searchBarPlaceholder:@"电影/电视剧/影人" didSearchBlock:^(PYSearchViewController *searchViewController, UISearchBar *searchBar, NSString *searchText) {
+        [searchViewController.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
+        
+    }];
+    // 3. present the searchViewController
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchViewController];
+    [self presentViewController:nav  animated:YES completion:nil];
+    return NO;
+}
 #pragma mark UICollectionView
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -113,32 +147,32 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"sectionHeaderView" forIndexPath:indexPath];
+    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"sectionHeaderView" forIndexPath:indexPath];
+    
+    for (UIView *subView in headerView.subviews) {
+        [subView removeFromSuperview];
+    }
+    UILabel *sectionLabel = [UILabel new];
+    sectionLabel.textColor = kGray_five;
+    sectionLabel.font = [UIFont boldSystemFontOfSize:20];
+    [headerView addSubview:sectionLabel];
+    [sectionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(headerView);
+        make.left.equalTo(headerView);
+    }];
+    if (indexPath.section == 0) {
+        sectionLabel.text = @"豆瓣口碑榜";
         
-        for (UIView *subView in headerView.subviews) {
-            [subView removeFromSuperview];
-        }
-        UILabel *sectionLabel = [UILabel new];
-        sectionLabel.textColor = kGray_five;
-        sectionLabel.font = [UIFont boldSystemFontOfSize:20];
-        [headerView addSubview:sectionLabel];
-        [sectionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(headerView);
-            make.left.equalTo(headerView).offset(2 * kMargin);
-        }];
-        if (indexPath.section == 0) {
-            sectionLabel.text = @"豆瓣口碑榜";
-            
-        }else if (indexPath.section == 2){
-            sectionLabel.text = @"豆瓣新片榜";
-            
-        }else if (indexPath.section == 3){
-            sectionLabel.text = @"北美票房榜";
-            
-        }else{
-            sectionLabel.text = @"豆瓣Top250";
-        }
-        return headerView;
+    }else if (indexPath.section == 2){
+        sectionLabel.text = @"豆瓣新片榜";
+        
+    }else if (indexPath.section == 3){
+        sectionLabel.text = @"北美票房榜";
+        
+    }else{
+        sectionLabel.text = @"豆瓣Top250";
+    }
+    return headerView;
     
 }
 
@@ -146,20 +180,25 @@
 {
     LHFindMovieCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCell" forIndexPath:indexPath];
     if (indexPath.section == 0) {
-        [cell setCellData:self.mainViewModel.weeklyRatingData[indexPath.row]];
+        LHSimpleMovieRanking *movie = self.mainViewModel.weeklyRatingData[indexPath.row];
+        [cell setCellData:movie.subject];
     }else if (indexPath.section == 1){
         [cell setCellData:self.mainViewModel.NewMovieRatingData[indexPath.row]];
     }else if (indexPath.section == 2){
-        [cell setCellData:self.mainViewModel.USBoxRatingData[indexPath.row]];
+        LHSimpleMovieRanking *movie = self.mainViewModel.USBoxRatingData[indexPath.row];
+        [cell setCellData:movie.subject];
     }else if (indexPath.section == 3){
-        [cell setCellData:self.mainViewModel.top250Data[indexPath.row]];
+        LHSimpleMovieRanking *movie = self.mainViewModel.top250Data[indexPath.row];
+        [cell setCellData:movie.subject];
     }
     
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-   
+    LHFindMovieCell *cell = (LHFindMovieCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    LHSimpleMovie *movie = [LHSimpleMovie mj_objectWithKeyValues:cell.cellData];
+    [self.mainViewModel.movieItemSubject sendNext:movie.identifier];
 }
 #pragma mark ---- UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section

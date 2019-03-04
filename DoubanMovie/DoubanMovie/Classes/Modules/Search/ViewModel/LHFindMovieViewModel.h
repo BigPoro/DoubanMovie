@@ -13,17 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LHFindMovieViewModel : LHViewModel
 
 @property (nonatomic, strong, readonly) RACCommand *getAllData;
+@property (nonatomic, strong, readonly) RACCommand *getMovieDeteil;
 
-/// 口碑榜
-@property (nonatomic, strong, readonly) RACCommand *getWeeklyRating;
-/// 北美票房榜
-@property (nonatomic, strong, readonly) RACCommand *getUSBoxRating;
-/// 新片榜
-@property (nonatomic, strong, readonly) RACCommand *getNewMoviesRating;
-/// Top250
-@property (nonatomic, strong, readonly) RACCommand *getTop250;
 /// 点击了Cell
-@property (nonatomic, strong, readonly) RACSubject *MovieItemSubject;
+@property (nonatomic, strong, readonly) RACSubject *movieItemSubject;
+/// 刷新
+@property (nonatomic, strong, readonly) RACSubject *refreshSubject;
 
 @property (nonatomic, strong, readonly) NSMutableArray *weeklyRatingData;
 @property (nonatomic, strong, readonly) NSMutableArray *NewMovieRatingData;
