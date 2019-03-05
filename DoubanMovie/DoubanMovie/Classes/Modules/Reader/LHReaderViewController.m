@@ -55,7 +55,7 @@
     [super setupUI];
     self.keywordsArr = @[@"小说",@"文学",@"人文社科",@"经济管理",@"科技科普",@"计算机与互联网",@"成功励志",@"生活",@"少儿",@"艺术设计",@"漫画绘本",@"教育考试",@"杂志"];
     self.navigationTitle = @"豆瓣读书";
-    self.tableView.frame = CGRectMake(0, 170, kScreenW, kScreenH - kNavigationBarHeight - kTabbarHeight);
+    self.tableView.frame = CGRectMake(0, 170, kScreenW, kScreenH - kNavigationBarHeight - kTabbarHeight - 150);
     
     HXTagsView *tagsView = [[HXTagsView alloc] initWithFrame:CGRectMake(0, 10, kScreenW, 150)];
     [self.view addSubview:tagsView];

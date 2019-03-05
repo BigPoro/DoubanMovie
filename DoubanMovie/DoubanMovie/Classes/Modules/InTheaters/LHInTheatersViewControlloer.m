@@ -76,7 +76,7 @@
     [self.mainViewModel.getMovieDeteil.executionSignals.switchToLatest subscribeNext:^(id x) {
        @strongify(self);
         DBWebViewController *vc = [[DBWebViewController alloc]init];
-        vc.URLString = x ;
+        vc.URLString = x;
         [self.navigationController pushViewController:vc animated:YES];
     }];
     // 控制刷新尾

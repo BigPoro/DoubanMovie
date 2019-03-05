@@ -46,30 +46,9 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     [self setupWebView];
-//    [self setupTheWebViewUserAgent];
     [self setupNavigationItems];
     [self setupProgressView];
     [self loadWebRequestWithUrlString:_URLString];// 获取之后再请求数据
-}
-
-- (void)setupTheWebViewUserAgent
-{
-    static dispatch_once_t onceToken;
-    kWeakSelf;
-    dispatch_once(&onceToken, ^{
-        [_webView evaluateJavaScript:@"navigator.userAgent" completionHandler:^(id __nullable result, NSError * __nullable error) {
-            //1）获取默认userAgent：
-            NSString *oldUA = result; 
-            //2）设置userAgent：添加额外的信息
-            NSString *newUA = [NSString stringWithFormat:@"%@%@",oldUA , @"#feixiu#iOS"];
-            NSDictionary *dictNU = @{@"UserAgent":newUA};
-            [[NSUserDefaults standardUserDefaults] registerDefaults:dictNU];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            if (@available(iOS 9.0, *)) {
-                [weakSelf.webView setCustomUserAgent:newUA];
-            }
-        }];
-    });
 }
 #pragma mark SetupUI
 - (void)setupWebView
@@ -109,12 +88,32 @@
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [backButton setImage:IMAGE_NAME(@"nav_back_default") forState:UIControlStateNormal];
-    [backButton setImage:IMAGE_NAME(@"nav_back_pressed") forState:UIControlStateHighlighted];
+    [backButton setImage:IMAGE_NAME(@"nav_back_default") forState:UIControlStateHighlighted];
     [backButton sizeToFit];
     backButton.contentEdgeInsets = UIEdgeInsetsMake(0, - 20, 0, 0);
     [backButton addTarget:self action:@selector(goBackAction:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
+}
+- (void)updateNavigationItem
+{
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setImage:IMAGE_NAME(@"nav_back_default") forState:UIControlStateNormal];
+    [backButton setImage:IMAGE_NAME(@"nav_back_default") forState:UIControlStateHighlighted];
+    [backButton sizeToFit];
+    backButton.contentEdgeInsets = UIEdgeInsetsMake(0, - 20, 0, 0);
+    [backButton addTarget:self action:@selector(goBackAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [closeButton setImage:IMAGE_NAME(@"ic_close_category_24x24_") forState:UIControlStateNormal];
+    [closeButton setImage:IMAGE_NAME(@"ic_close_category_24x24_") forState:UIControlStateHighlighted];
+    [closeButton sizeToFit];
+    closeButton.contentEdgeInsets = UIEdgeInsetsMake(0, - 20, 0, 0);
+    [closeButton addTarget:self action:@selector(closeAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *closeItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
+
+    self.navigationItem.leftBarButtonItems = @[backItem,closeItem];
 }
 - (void)setupProgressView
 {
@@ -133,16 +132,21 @@
 - (void)goBackAction:(UIButton *)sender
 {
     //判断是否有上一层H5页面 
-//    if ([_webView canGoBack]) {
-//        [_webView goBack];
-//    } else {
+    if ([_webView canGoBack]) {
+        [_webView goBack];
+        [self updateNavigationItem];
+    } else {
         [self.navigationController popViewControllerAnimated:YES];
-//    }
+    }
+}
+- (void)closeAction:(UIButton *)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 // 清除缓存和cookie
 - (void)cleanCacheAndCookie
 {
-    if (@available(iOS 9.0, *)) // iOS 8.0 的WKWebView没有c清除缓存的功能
+    if (@available(iOS 9.0, *)) // iOS 8.0 的WKWebView没有清除缓存的功能
     {
         NSSet *websiteDataTypes = [WKWebsiteDataStore allWebsiteDataTypes];
         //// Date from
@@ -157,7 +161,7 @@
 
 - (void)loadWebRequestWithUrlString:(NSString *)urlString
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@",urlString]];
+    NSURL *url = [NSURL URLWithString:[[NSString stringWithFormat:@"%@",urlString] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     [_webView loadRequest:request];
 }
@@ -182,7 +186,7 @@
 // 接收到服务器跳转请求之后再执行
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation
 {
-    [self loadWebRequestWithUrlString:_URLString];
+    
 }
 
 // 页面加载完调用
@@ -200,7 +204,6 @@
         [_activityView stopAnimating];
         _rightItem = [[UIBarButtonItem alloc]initWithCustomView:_refreshBtn];
         self.navigationItem.rightBarButtonItem = _rightItem;
-
     }
     @catch (NSException *exception) {
 
@@ -236,7 +239,6 @@
             });
         }
        
-
         else
         {
             if (navigationAction.targetFrame == nil)
