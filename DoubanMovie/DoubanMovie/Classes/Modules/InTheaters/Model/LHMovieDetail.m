@@ -7,9 +7,6 @@
 }
 @end
 
-@implementation LHAttrs
-@end
-
-@implementation LHAuthor
+@implementation LHMovieAttrs
 @end
 

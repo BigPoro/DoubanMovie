@@ -106,8 +106,9 @@
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
     UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [closeButton setImage:IMAGE_NAME(@"ic_close_category_24x24_") forState:UIControlStateNormal];
-    [closeButton setImage:IMAGE_NAME(@"ic_close_category_24x24_") forState:UIControlStateHighlighted];
+    [closeButton setTitle:@"关闭" forState:UIControlStateNormal];
+    closeButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    [closeButton setTitleColor:kGray_five forState:UIControlStateNormal];
     [closeButton sizeToFit];
     closeButton.contentEdgeInsets = UIEdgeInsetsMake(0, - 20, 0, 0);
     [closeButton addTarget:self action:@selector(closeAction:) forControlEvents:UIControlEventTouchUpInside];

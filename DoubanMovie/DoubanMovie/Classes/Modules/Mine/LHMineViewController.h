@@ -6,11 +6,11 @@
 //  Copyright © 2019 iDog. All rights reserved.
 //
 
-#import "LHViewController.h"
+#import "LHTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LHMineViewController : LHViewController
+@interface LHMineViewController : LHTableViewController
 
 @end
 

@@ -1,7 +1,7 @@
 #import "LHModel.h"
 #import "LHImages.h"
 @class LHSimpleBook;
-@class LHTag;
+@class LHTags;
 @class LHRating;
 NS_ASSUME_NONNULL_BEGIN
 
@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)   NSString *subtitle;
 @property (nonatomic, strong) NSArray<NSString *> *author;
 @property (nonatomic, copy)   NSString *pubdate;
-@property (nonatomic, strong) NSArray<LHTag *> *tags;
+@property (nonatomic, strong) NSArray<LHTags *> *tags;
 @property (nonatomic, copy)   NSString *originTitle;
 @property (nonatomic, copy)   NSString *image;
 @property (nonatomic, copy)   NSString *binding;

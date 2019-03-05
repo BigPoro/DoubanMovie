@@ -1,7 +1,7 @@
 #import "LHModel.h"
 
 @class LHMovieDetail;
-@class LHAttrs;
+@class LHMovieAttrs;
 @class LHAuthor;
 @class LHRating;
 @class LHTag;
@@ -25,14 +25,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)   NSString *image;
 @property (nonatomic, copy)   NSString *title;
 @property (nonatomic, copy)   NSString *summary;
-@property (nonatomic, strong) LHAttrs *attrs;
+@property (nonatomic, strong) LHMovieAttrs *attrs;
 @property (nonatomic, copy)   NSString *identifier;
 @property (nonatomic, copy)   NSString *mobileLink;
 @property (nonatomic, copy)   NSString *altTitle;
 @property (nonatomic, strong) NSArray<LHTag *> *tags;
 @end
 
-@interface LHAttrs : NSObject
+@interface LHMovieAttrs : NSObject
 @property (nonatomic, strong) NSArray<NSString *> *language;
 @property (nonatomic, strong) NSArray<NSString *> *pubdate;
 @property (nonatomic, strong) NSArray<NSString *> *title;
@@ -43,10 +43,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray<NSString *> *movieDuration;
 @property (nonatomic, strong) NSArray<NSString *> *year;
 @property (nonatomic, strong) NSArray<NSString *> *movieType;
-@end
-
-@interface LHAuthor : NSObject
-@property (nonatomic, copy) NSString *name;
 @end
 
 NS_ASSUME_NONNULL_END

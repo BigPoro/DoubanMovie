@@ -1,39 +1,38 @@
 //
-//  LHBooksViewModel.m
+//  LHMusicViewModel.m
 //  DoubanMovie
 //
-//  Created by iDog on 2019/3/4.
+//  Created by iDog on 2019/3/5.
 //  Copyright © 2019 iDog. All rights reserved.
 //
 
-#import "LHBooksViewModel.h"
-#import "LHBookList.h"
-@interface LHBooksViewModel ()
+#import "LHMusicViewModel.h"
+#import "LHMusicList.h"
+@interface LHMusicViewModel ()
 @property (nonatomic, strong, readwrite) RACCommand *getSearchResult;
 @property (nonatomic, strong, readwrite) RACCommand *getNextSearchResult;
 @property (nonatomic, strong, readwrite) RACSubject *refreshEndSubject;
-@property (nonatomic, strong, readwrite) RACSubject *getBookDetail;
+@property (nonatomic, strong, readwrite) RACSubject *getMusicDetail;
 
 /// 记录下标
 @property (nonatomic, assign) NSInteger currentPage;
 @end
-
-@implementation LHBooksViewModel
-
+@implementation LHMusicViewModel
 - (RACCommand *)getSearchResult
 {
     if (!_getSearchResult) {
+        _keywords = @"周杰伦";
         @weakify(self);
         _getSearchResult = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
             @strongify(self);
             self.currentPage = 0;
             return [RACSubject createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 NSMutableDictionary *params = [@{@"start":@(self.currentPage),@"count":@(kPageCount)} mutableCopy];
-                [[[LHNetwork shared]executeURLRequest:[NSString stringWithFormat:@"/book/search?q=\"%@\"",self.keywords] methodType:LHNetworkMethodGET params:params] subscribeNext:^(id x) {
-                    LHBookList *bookList = [LHBookList mj_objectWithKeyValues:x];
-                    self.dataSource = [bookList.books mutableCopy];
+                [[[LHNetwork shared]executeURLRequest:[NSString stringWithFormat:@"/music/search?q=\"%@\"",self.keywords] methodType:LHNetworkMethodGET params:params] subscribeNext:^(id x) {
+                    LHMusicList *musicList = [LHMusicList mj_objectWithKeyValues:x];
+                    self.dataSource = [musicList.musics mutableCopy];
                     
-                    if (bookList.count < bookList.total || bookList.count * bookList.start < bookList.total) {
+                    if (musicList.count < musicList.total || musicList.count * musicList.start < musicList.total) {
                         [self.refreshEndSubject sendNext:@(LHFooterRefresh_HasMoreData)];
                     }else{
                         [self.refreshEndSubject sendNext:@(LHFooterRefresh_HasNoMoreData)];
@@ -67,16 +66,16 @@
             self.currentPage++;
             return [RACSubject createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 NSMutableDictionary *params = [@{@"start":@(self.currentPage),@"count":@(kPageCount)} mutableCopy];
-                [[[LHNetwork shared]executeURLRequest:[NSString stringWithFormat:@"/book/search?q=\"%@\"",self.keywords] methodType:LHNetworkMethodGET params:params] subscribeNext:^(id x) {
-                    LHBookList *bookList = [LHBookList mj_objectWithKeyValues:x];
+                [[[LHNetwork shared]executeURLRequest:[NSString stringWithFormat:@"/music/search?q=\"%@\"",self.keywords] methodType:LHNetworkMethodGET params:params] subscribeNext:^(id x) {
+                    LHMusicList *musicList = [LHMusicList mj_objectWithKeyValues:x];
+                    [self.dataSource addObjectsFromArray:musicList.musics];
                     
-                    [self.dataSource addObjectsFromArray:bookList.books];
-                    [subscriber sendNext:bookList];
-                    if (bookList.count < bookList.total || bookList.count * bookList.start < bookList.total) {
+                    if (musicList.count < musicList.total || musicList.count * musicList.start < musicList.total) {
                         [self.refreshEndSubject sendNext:@(LHFooterRefresh_HasMoreData)];
                     }else{
                         [self.refreshEndSubject sendNext:@(LHFooterRefresh_HasNoMoreData)];
                     }
+                    
                     [subscriber sendNext:x];
                     [subscriber sendCompleted];
                 } error:^(NSError *error) {
@@ -103,11 +102,11 @@
     }
     return _refreshEndSubject;
 }
-- (RACSubject *)getBookDetail
+- (RACSubject *)getMusicDetail
 {
-    if (!_getBookDetail) {
-        _getBookDetail = [RACSubject subject];
+    if (!_getMusicDetail) {
+        _getMusicDetail = [RACSubject subject];
     }
-    return _getBookDetail;
+    return _getMusicDetail;
 }
 @end

@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, LHNetworkMethodType) {
     LHNetworkMethodDELETE
 };
 
-static NSInteger const kPageCount = 10;
+static NSInteger const kPageCount = 20;
 
 NS_ASSUME_NONNULL_BEGIN
 

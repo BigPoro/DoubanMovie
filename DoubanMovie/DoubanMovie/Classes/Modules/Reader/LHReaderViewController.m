@@ -41,6 +41,27 @@
         @strongify(self);
         [self.tableView reloadData];
     }];
+    [self.mainViewModel.getNextSearchResult.executionSignals.switchToLatest subscribeNext:^(id x) {
+        [self.tableView.mj_footer endRefreshing];
+        [self.tableView reloadData];
+    }];
+    // 控制刷新尾
+    [self.mainViewModel.refreshEndSubject subscribeNext:^(id x) {
+        @strongify(self);
+        LHRefreshDataStatus status = [x integerValue];
+        switch (status) {
+            case LHFooterRefresh_HasMoreData:{
+                
+                self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+                    [self.mainViewModel.getNextSearchResult execute:nil];
+                }];
+                break;
+            }
+            case LHFooterRefresh_HasNoMoreData:
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+                break;
+        }
+    }];
     [self.mainViewModel.getSearchResult execute:@(1)];
     [self.mainViewModel.getBookDetail subscribeNext:^(id x) {
         @strongify(self);
@@ -55,7 +76,7 @@
     [super setupUI];
     self.keywordsArr = @[@"小说",@"文学",@"人文社科",@"经济管理",@"科技科普",@"计算机与互联网",@"成功励志",@"生活",@"少儿",@"艺术设计",@"漫画绘本",@"教育考试",@"杂志"];
     self.navigationTitle = @"豆瓣读书";
-    self.tableView.frame = CGRectMake(0, 170, kScreenW, kScreenH - kNavigationBarHeight - kTabbarHeight - 150);
+    self.tableView.frame = CGRectMake(0, 170, kScreenW, kScreenH - kNavigationBarHeight - kTabbarHeight - 170);
     
     HXTagsView *tagsView = [[HXTagsView alloc] initWithFrame:CGRectMake(0, 10, kScreenW, 150)];
     [self.view addSubview:tagsView];

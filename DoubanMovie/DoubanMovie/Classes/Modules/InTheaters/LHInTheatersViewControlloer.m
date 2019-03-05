@@ -180,6 +180,7 @@
         [searchViewController.navigationController pushViewController:[[UIViewController alloc] init] animated:YES];
         
     }];
+    searchViewController.showSearchHistory = NO;
     // 3. present the searchViewController
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:searchViewController];
     [self presentViewController:nav  animated:YES completion:nil];

@@ -1,6 +1,6 @@
-#import "LHSimpleBook.h"
+#import "LHSimpleMusic.h"
 
-@implementation LHSimpleBook
+@implementation LHSimpleMusic
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{@"identifier":@"id"
@@ -8,8 +8,14 @@
 }
 + (NSDictionary *)mj_objectClassInArray
 {
-    return @{@"tags": @"LHTags"
+    return @{@"tags": @"LHTags",
+             @"author":@"LHAuthor"
              };
 }
 @end
+
+@implementation LHMusicAttrs
+@end
+
+
 

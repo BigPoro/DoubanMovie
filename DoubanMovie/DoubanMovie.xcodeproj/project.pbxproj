@@ -63,6 +63,11 @@
 		53FD6359222D2490004866AA /* HXTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD6350222D2490004866AA /* HXTagsCell.m */; };
 		53FD635A222D2490004866AA /* HXTagAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD6352222D2490004866AA /* HXTagAttribute.m */; };
 		53FD635B222D2490004866AA /* HXTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD6355222D2490004866AA /* HXTagCollectionViewFlowLayout.m */; };
+		53FD6360222E2094004866AA /* LHMusicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD635F222E2094004866AA /* LHMusicViewModel.m */; };
+		53FD6363222E20BE004866AA /* LHMusicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD6362222E20BE004866AA /* LHMusicCell.m */; };
+		53FD6367222E2587004866AA /* LHMusicList.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD6366222E2587004866AA /* LHMusicList.m */; };
+		53FD636A222E25BD004866AA /* LHSimpleMusic.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD6368222E25BD004866AA /* LHSimpleMusic.m */; };
+		53FD636D222E5100004866AA /* LHAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 53FD636C222E5100004866AA /* LHAuthor.m */; };
 		FB64C4EE7DFFDA29C706E0E4 /* libPods-DoubanMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AD508EF1DFFEA5B12BF788 /* libPods-DoubanMovie.a */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +186,16 @@
 		53FD6354222D2490004866AA /* HXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsView.h; sourceTree = "<group>"; };
 		53FD6355222D2490004866AA /* HXTagCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		53FD6356222D2490004866AA /* HXTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsCell.h; sourceTree = "<group>"; };
+		53FD635E222E2094004866AA /* LHMusicViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMusicViewModel.h; sourceTree = "<group>"; };
+		53FD635F222E2094004866AA /* LHMusicViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMusicViewModel.m; sourceTree = "<group>"; };
+		53FD6361222E20BE004866AA /* LHMusicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMusicCell.h; sourceTree = "<group>"; };
+		53FD6362222E20BE004866AA /* LHMusicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMusicCell.m; sourceTree = "<group>"; };
+		53FD6365222E2587004866AA /* LHMusicList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHMusicList.h; sourceTree = "<group>"; };
+		53FD6366222E2587004866AA /* LHMusicList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHMusicList.m; sourceTree = "<group>"; };
+		53FD6368222E25BD004866AA /* LHSimpleMusic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHSimpleMusic.m; sourceTree = "<group>"; };
+		53FD6369222E25BD004866AA /* LHSimpleMusic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHSimpleMusic.h; sourceTree = "<group>"; };
+		53FD636B222E5100004866AA /* LHAuthor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHAuthor.h; sourceTree = "<group>"; };
+		53FD636C222E5100004866AA /* LHAuthor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHAuthor.m; sourceTree = "<group>"; };
 		8F936933B00D8E87310338CD /* Pods-DoubanMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoubanMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoubanMovie/Pods-DoubanMovie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -393,6 +408,9 @@
 		53CFB7A6221FE30E00EFD786 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				53FD6364222E2539004866AA /* Model */,
+				53FD635D222E2046004866AA /* View */,
+				53FD635C222E2000004866AA /* ViewModel */,
 				53CFB7A7221FE31C00EFD786 /* LHMusicViewController.h */,
 				53CFB7A8221FE31C00EFD786 /* LHMusicViewController.m */,
 			);
@@ -423,6 +441,8 @@
 				53FD632A222D1441004866AA /* LHImages.m */,
 				53FD6349222D2438004866AA /* LHTags.h */,
 				53FD634A222D2438004866AA /* LHTags.m */,
+				53FD636B222E5100004866AA /* LHAuthor.h */,
+				53FD636C222E5100004866AA /* LHAuthor.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -530,6 +550,35 @@
 				53FD6356222D2490004866AA /* HXTagsCell.h */,
 			);
 			path = HXTagsView;
+			sourceTree = "<group>";
+		};
+		53FD635C222E2000004866AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				53FD635E222E2094004866AA /* LHMusicViewModel.h */,
+				53FD635F222E2094004866AA /* LHMusicViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		53FD635D222E2046004866AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53FD6361222E20BE004866AA /* LHMusicCell.h */,
+				53FD6362222E20BE004866AA /* LHMusicCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53FD6364222E2539004866AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53FD6365222E2587004866AA /* LHMusicList.h */,
+				53FD6366222E2587004866AA /* LHMusicList.m */,
+				53FD6369222E25BD004866AA /* LHSimpleMusic.h */,
+				53FD6368222E25BD004866AA /* LHSimpleMusic.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AF62BC7F841FFB5BF517EE89 /* Pods */ = {
@@ -665,8 +714,10 @@
 				53CFB7BF2226324400EFD786 /* LHMovieDetail.m in Sources */,
 				53CFB80D2229424D00EFD786 /* DBWebViewController.m in Sources */,
 				53CFB7EA222699C500EFD786 /* LHMovieList.m in Sources */,
+				53FD6360222E2094004866AA /* LHMusicViewModel.m in Sources */,
 				53FD6324222CC7C6004866AA /* LHMovieRankingList.m in Sources */,
 				53CFB786221F02F100EFD786 /* UIView+JKToast.m in Sources */,
+				53FD6367222E2587004866AA /* LHMusicList.m in Sources */,
 				53FD635A222D2490004866AA /* HXTagAttribute.m in Sources */,
 				53CFB815222A232700EFD786 /* LHFindMovieCell.m in Sources */,
 				53CFB7A9221FE31C00EFD786 /* LHMusicViewController.m in Sources */,
@@ -675,6 +726,7 @@
 				53FD6331222D15D9004866AA /* LHBookList.m in Sources */,
 				53CFB795221F052B00EFD786 /* LHViewController.m in Sources */,
 				53CFB78E221F03E100EFD786 /* NSDate+JKUtilities.m in Sources */,
+				53FD636D222E5100004866AA /* LHAuthor.m in Sources */,
 				53CFB8072229176C00EFD786 /* HMSegmentedControl.m in Sources */,
 				53CFB780221F029F00EFD786 /* UIImage+JKRemoteSize.m in Sources */,
 				53CFB7A5221FCCB400EFD786 /* LHReaderViewController.m in Sources */,
@@ -688,6 +740,7 @@
 				53CFB792221F03F200EFD786 /* NSDate+JKLunarCalendar.m in Sources */,
 				53CFB77D221F026D00EFD786 /* UIImage+JKOrientation.m in Sources */,
 				53CFB775221EFB0A00EFD786 /* LHNavigationController.m in Sources */,
+				53FD636A222E25BD004866AA /* LHSimpleMusic.m in Sources */,
 				53CFB7E12226765C00EFD786 /* NSDictionary+Log.m in Sources */,
 				53CFB7ED22269B3300EFD786 /* LHInTheatersViewModel.m in Sources */,
 				53CFB756221E971300EFD786 /* main.m in Sources */,
@@ -709,6 +762,7 @@
 				53CFB79B221F8A5800EFD786 /* LHFindMovieViewController.m in Sources */,
 				53CFB7C82226348100EFD786 /* LHRating.m in Sources */,
 				53CFB7FB2227C7F600EFD786 /* LHComingSoonCell.m in Sources */,
+				53FD6363222E20BE004866AA /* LHMusicCell.m in Sources */,
 				53CFB7D2222668A700EFD786 /* LHTableViewCell.m in Sources */,
 				53CFB7DE2226759A00EFD786 /* NSArray+Log.m in Sources */,
 				53FD6334222D17E2004866AA /* LHBooksViewModel.m in Sources */,
